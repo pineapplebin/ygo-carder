@@ -6,12 +6,14 @@ import pAttrDark from '../../../../assets/attribute-dark.png'
 import pAttrLight from '../../../../assets/attribute-light.png'
 import pLevel from '../../../../assets/level.png'
 import pCardEffect from '../../../../assets/card-effect.png'
+import pCardLink from '../../../../assets/card-link.png'
 
 import { TCardType, TMonsterAttribute, TLevel } from '../types'
 
 export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   // background
   { name: `bg-${TCardType.EFFECT}`, url: pCardEffect },
+  { name: `bg-${TCardType.LINK}`, url: pCardLink },
   // attribute
   { name: `attribute-${TMonsterAttribute.FIRE}`, url: pAttrFire },
   { name: `attribute-${TMonsterAttribute.WATER}`, url: pAttrWater },

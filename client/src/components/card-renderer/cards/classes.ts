@@ -47,9 +47,9 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制背景
    */
-  protected drawBackground(type: TCardType) {
+  protected drawBackground() {
     this.drawElement({
-      name: `bg-${type}`,
+      name: `bg-${this.$type}`,
       x: 0,
       y: 0,
       width: 710,
@@ -61,12 +61,14 @@ export abstract class BaseCardTemplate {
    * 绘制卡名
    * @TODO 支持罕贵度卡名
    */
-  protected drawCardName(name: string) {
+  protected drawCardName(name: string, options?: { color?: string }) {
+    const opt = Object.assign({ color: '#000' }, options)
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
       fontSize: Math.floor(this.$sizer.fromPx(48)),
       strokeThickness: 0.5,
-      stroke: '#000',
+      stroke: opt.color,
+      fill: opt.color,
       letterSpacing: -1
     })
     const maxWidth = this.$sizer.fromPx(526)
@@ -137,7 +139,7 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
       fontSize: Math.floor(this.$sizer.fromPx(26)),
-      strokeThickness: .4,
+      strokeThickness: 0.4,
       stroke: '#000'
     })
     const text = new PIXI.Text('【兽族/效果】', fontStyle)

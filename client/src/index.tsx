@@ -4,7 +4,6 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { useState } from 'react'
 
-import { CardComponent } from './components/card/index'
 import { FetchCardCaseSingleton } from './domain/fetch-card'
 import { CardRenderer } from './components/card-renderer/index'
 

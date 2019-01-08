@@ -13,7 +13,7 @@ export class FetchCardCase extends BaseUseCase {
     return {
       cardCode,
       name: '宝玉兽 青玉飞马',
-      type: TCardType.EFFECT,
+      type: TCardType.LINK,
       attribute: TMonsterAttribute.WIND,
       imageUrl: pSampleImage,
       level: 4
