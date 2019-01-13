@@ -1,5 +1,6 @@
 import './index.less'
 import * as React from 'react'
+import { useState, useEffect } from 'react'
 import { CardContainer } from './cards/index'
 import { IBaseCard } from './types'
 

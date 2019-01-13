@@ -11,7 +11,11 @@ export class Loader {
 
   preloadTextures(resources: TResourcesArg): Promise<void> {
     return new Promise((resolve) => {
-      PIXI.loader.add(resources).load(() => {
+      const res = resources.map((item) => {
+        item.url = `/${item.url}`
+        return item
+      })
+      PIXI.loader.add(res).load(() => {
         resolve()
       })
     })

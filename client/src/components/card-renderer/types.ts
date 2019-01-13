@@ -37,4 +37,5 @@ export interface IBaseMonsterCard extends IBaseCard {
 
 export interface IEffectCard extends IBaseMonsterCard {
   level: number
+  effectText: string
 }
