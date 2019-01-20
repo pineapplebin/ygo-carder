@@ -17,20 +17,37 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ['ts-loader']
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
       },
       {
-        test: /\.less$/,
+        test: /.js$/,
+        use: ['source-map-loader'],
+        enforce: 'pre'
+      },
+      {
+        test: /\.(le|c)ss$/,
         use: [
-          { loader: 'style-loader' },
-          { loader: 'css-loader' },
+          'style-loader',
+          'css-loader',
           {
             loader: 'less-loader',
             options: {
               strictMath: true,
               noIeCompat: true
             }
-          }
+          },
+          // {
+          //   loader: 'typings-for-css-modules-loader',
+          //   options: {
+          //     modules: true,
+          //     namedExport: true
+          //   }
+          // }
         ]
       },
       {

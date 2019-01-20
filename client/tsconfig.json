@@ -2,11 +2,11 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "es6", "es7"],
-    "module": "es6",
+    "module": "commonjs",
     "noImplicitAny": true,
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "./dist/",
     "jsx": "react"
   },
-  "include": ["src/**/*"]
+  "include": ["./src/**/*"]
 }

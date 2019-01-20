@@ -104,7 +104,6 @@ export abstract class BaseCardTemplate {
     const textures = await this.$loader.loadTexture([
       { name, url: card.imageUrl }
     ])
-    console.log(textures)
     const sprite = new PIXI.Sprite(textures[name])
     sprite.x = this.$sizer.fromPx(83)
     sprite.y = this.$sizer.fromPx(188)
