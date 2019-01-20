@@ -4,13 +4,13 @@ import './styles/main.less'
 import '../assets/YGODIY-Chinese.ttf'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { BrowserRouter, Route } from 'react-router-dom'
-import { pages } from './pages/index'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { pages, NotMatch } from './pages/index'
 
 interface IRouteWrapParam {
   exact?: boolean
   path: string
-  wrap: React.SFC
+  wrap: (...props: any[]) => JSX.Element
   key: string
 }
 
@@ -28,12 +28,15 @@ function RouteWrap(param: IRouteWrapParam) {
 function App() {
   return (
     <div className='content'>
-      {pages.map((p, idx) =>
-        RouteWrap({
-          ...p,
-          key: '' + idx
-        })
-      )}
+      <Switch>
+        {pages.map((p, idx) =>
+          RouteWrap({
+            ...p,
+            key: '' + idx
+          })
+        )}
+        <NotMatch />
+      </Switch>
     </div>
   )
 }
