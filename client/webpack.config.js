@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 const env = process.env.NODE_ENV || 'production'
 
@@ -13,6 +14,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
+  plugins: [new webpack.WatchIgnorePlugin([/css\.d\.ts$/])],
   module: {
     rules: [
       {
@@ -30,25 +32,34 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.(le|c)ss$/,
+        test: /\.less$/,
+        include: path.join(__dirname, 'src/styles'),
+        use: ['style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.module\.less$/,
+        exclude: [/node_modules/, path.join(__dirname, 'src/styles')],
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              namedExport: true,
+              camelCase: true
+            }
+          },
           {
             loader: 'less-loader',
             options: {
-              strictMath: true,
-              noIeCompat: true
+              javascriptEnabled: true
             }
-          },
-          // {
-          //   loader: 'typings-for-css-modules-loader',
-          //   options: {
-          //     modules: true,
-          //     namedExport: true
-          //   }
-          // }
+          }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/,

@@ -1,8 +1,8 @@
-import './index.less'
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import { CardContainer } from './cards/index'
 import { IBaseCard } from './types'
+import * as s from './index.module.less'
 
 interface IProp {
   width: number
@@ -36,7 +36,7 @@ export class CardRenderer extends React.Component<IProp, IState> {
     const width = this.props.width > 710 ? 710 : this.props.width
     return (
       <div
-        className='card-renderer'
+        className={s.cardRenderer}
         style={{ width: `${width}px`, fontFamily: 'YGOCN' }}
         ref={(div) => (this.el = div)}
       />
