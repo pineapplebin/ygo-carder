@@ -1,7 +1,7 @@
 import * as React from 'react'
 // import { useState, useEffect } from 'react'
 import { CardContainer } from './cards/index'
-import { IBaseCard } from './types'
+import { IBaseCard } from '@/typings/card'
 import * as s from './index.module.less'
 
 interface IProp {

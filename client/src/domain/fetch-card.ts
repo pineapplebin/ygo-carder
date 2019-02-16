@@ -6,7 +6,7 @@ import {
   IEffectCard,
   TCardType,
   TMonsterAttribute
-} from '../components/card-renderer/types'
+} from '@/typings/card'
 
 export class FetchCardCase extends BaseUseCase {
   getCard(cardCode: string): IBaseCard {
@@ -16,8 +16,7 @@ export class FetchCardCase extends BaseUseCase {
       type: TCardType.EFFECT,
       attribute: TMonsterAttribute.WIND,
       imageUrl: '/' + pSampleImage,
-      // @ts-ignore
-      effectText: `①：这张卡召唤·反转召唤·特殊召唤成功时才能发动。从自己的手卡·卡组·墓地选1只「宝玉兽」怪兽当作永续魔法卡使用在自己的魔法与陷阱区域表侧表示放置。②：表侧表示的这张卡在怪兽区域被破坏的场合，可以不送去墓地当作永续魔法卡使用在自己的魔法与陷阱区域表侧表示放置。`,
+      effectText: `①：这张卡召唤·反转召唤·特殊召唤成功时才能发动。从自己的手卡·卡组·墓地选1只「宝玉兽」怪兽当作永续魔法卡使用在自己的魔法与陷阱区域表侧表示放置。②：表侧表示的这张卡在怪兽区域被破坏的场合，可以不送去墓地当作永续魔法卡使用在自己的魔法与陷阱区域表侧表示放置。`, // tslint:disable
       level: 4
     } as IEffectCard
   }

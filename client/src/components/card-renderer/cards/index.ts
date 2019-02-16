@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js'
 import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
 import { PRELOAD_IMAGE } from './preload'
-import { IBaseCard } from '../types'
+import { IBaseCard } from '@/typings/card'
 import { BaseCardTemplate } from './classes'
 import { templateFactory } from './factory'
 

@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js'
 import { BaseCardTemplate } from './classes'
-import { TCardType } from '../types'
+import { TCardType } from '@/typings/card'
 import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
 import { EffectCardTemplate } from './effect'

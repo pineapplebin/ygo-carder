@@ -5,7 +5,7 @@ import {
   TMonsterAttribute,
   TLevel,
   IEffectCard
-} from '../types'
+} from '@/typings/card'
 import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
 

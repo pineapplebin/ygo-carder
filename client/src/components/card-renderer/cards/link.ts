@@ -1,5 +1,5 @@
 import { BaseMonsterCardTemplate } from './classes'
-import { TCardType, IEffectCard } from '../types'
+import { TCardType, IEffectCard } from '@/typings/card'
 
 export class LinkCardTemplate extends BaseMonsterCardTemplate {
   $type = TCardType.LINK

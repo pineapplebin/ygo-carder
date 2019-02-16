@@ -1,5 +1,5 @@
 import { BaseMonsterCardTemplate } from './classes'
-import { TCardType, IEffectCard } from '../types'
+import { TCardType, IEffectCard } from '@/typings/card'
 
 export class EffectCardTemplate extends BaseMonsterCardTemplate {
   $type = TCardType.EFFECT
@@ -27,7 +27,7 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
     })
     const text = new PIXI.Text(effectText, fontStyle)
     text.x = this.$sizer.fromPx(52)
-    text.y = this.$sizer.fromPx(810)
+    text.y = this.$sizer.fromPx(806)
     this.$app.stage.addChild(text)
   }
 }

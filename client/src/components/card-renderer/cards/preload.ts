@@ -8,7 +8,7 @@ import pLevel from '../../../../assets/level.png'
 import pCardEffect from '../../../../assets/card-effect.png'
 import pCardLink from '../../../../assets/card-link.png'
 
-import { TCardType, TMonsterAttribute, TLevel } from '../types'
+import { TCardType, TMonsterAttribute, TLevel } from '@/typings/card'
 
 export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   // background
