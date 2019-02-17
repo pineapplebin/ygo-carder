@@ -4,7 +4,7 @@ import {
   TCardType,
   TMonsterAttribute,
   TLevel,
-  IEffectCard
+  IEffectMonsterCard,
 } from '@/typings/card'
 import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
@@ -53,7 +53,7 @@ export abstract class BaseCardTemplate {
       x: 0,
       y: 0,
       width: 710,
-      height: 1035
+      height: 1035,
     })
   }
 
@@ -69,7 +69,7 @@ export abstract class BaseCardTemplate {
       strokeThickness: 0.5,
       stroke: opt.color,
       fill: opt.color,
-      letterSpacing: -1
+      letterSpacing: -1,
     })
     const maxWidth = this.$sizer.fromPx(526)
     const text = new PIXI.Text(name, fontStyle)
@@ -92,7 +92,7 @@ export abstract class BaseCardTemplate {
       x: 592,
       y: 47,
       width: 65,
-      height: 65
+      height: 65,
     })
   }
 
@@ -102,7 +102,7 @@ export abstract class BaseCardTemplate {
   protected async drawCardImage(card: IBaseCard) {
     const name = `card-${card.cardCode}`
     const textures = await this.$loader.loadTexture([
-      { name, url: card.imageUrl }
+      { name, url: card.imageUrl },
     ])
     const sprite = new PIXI.Sprite(textures[name])
     sprite.x = this.$sizer.fromPx(83)
@@ -111,6 +111,39 @@ export abstract class BaseCardTemplate {
     sprite.height = this.$sizer.fromPx(544)
     this.$app.stage.addChild(sprite)
   }
+
+  /**
+   * 绘制卡片号码
+   */
+  protected async drawCardCode(cardCode: string) {
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'MatrixBoldSmallCaps',
+      strokeThickness: 0,
+      stroke: '#000',
+      fontSize: this.$sizer.fromPx(20),
+    })
+    const text = new PIXI.Text(cardCode, fontStyle)
+    text.x = this.$sizer.fromPx(30)
+    text.y = this.$sizer.fromPx(990)
+    this.$app.stage.addChild(text)
+  }
+
+  /**
+   * 绘制系列号码
+   */
+  protected async drawSeries(series: string) {
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'Stone Serif',
+      strokeThickness: 0,
+      stroke: '#000',
+      fontSize: this.$sizer.fromPx(20),
+    })
+    const text = new PIXI.Text(series, fontStyle)
+    text.anchor.set(1, 0)
+    text.x = this.$sizer.fromPx(633)
+    text.y = this.$sizer.fromPx(740)
+    this.$app.stage.addChild(text)
+  }
 }
 
 export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
@@ -118,7 +151,7 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
    * 绘制等级
    */
   protected async drawLevel(level: number) {
-    const x = 595
+    const x = 598
     const y = 125
     for (let i = 0; i < level; i++) {
       this.drawElement({
@@ -126,7 +159,7 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
         x: x - i * 48,
         y,
         width: 45,
-        height: 45
+        height: 45,
       })
     }
   }
@@ -134,16 +167,103 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
   /**
    * 绘制卡牌信息（种族等）
    */
-  protected async drawInformation(card: IEffectCard) {
+  protected async drawInformation(card: IEffectMonsterCard) {
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
       fontSize: Math.floor(this.$sizer.fromPx(26)),
       strokeThickness: 0.4,
-      stroke: '#000'
+      stroke: '#000',
     })
-    const text = new PIXI.Text('【兽族/效果】', fontStyle)
+    const text = new PIXI.Text(`【${card.extra.types.join('/')}】`, fontStyle)
     text.x = this.$sizer.fromPx(37)
     text.y = this.$sizer.fromPx(778)
+    this.$app.stage.addChild(text)
+  }
+
+  /**
+   * 绘制效果文本
+   * 根据内容长度压缩大小
+   */
+  protected async drawEffectText(effectText: string) {
+    let triedCount = 0
+    let currentFontSize = 24
+    let fontStyle = null
+    const style = {
+      fontFamily: 'YGOCN',
+      strokeThickness: 0.2,
+      stroke: '#000',
+      breakWords: true,
+      wordWrap: true,
+      wordWrapWidth: this.$sizer.fromPx(608),
+    }
+    const minLineHeight = 20
+    const maxHeight = this.$sizer.fromPx(133)
+    const maxTry = 4
+    while (triedCount++ < maxTry) {
+      const lineHeight = 26
+      fontStyle = new PIXI.TextStyle({
+        ...style,
+        fontSize: Math.floor(this.$sizer.fromPx(currentFontSize)),
+        lineHeight: Math.floor(this.$sizer.fromPx(lineHeight)),
+      })
+      // 测量尺寸
+      const measure = PIXI.TextMetrics.measureText(effectText, fontStyle)
+      if (measure.height <= maxHeight) {
+        break
+      }
+      const delta = +(measure.height - maxHeight).toPrecision(10)
+      const reversed = this.$sizer.reverseResult(delta)
+      // 计算行高是否能压缩
+      // 否则减少字号
+      const lineHeightDelta = lineHeight - reversed / (measure.lines.length - 1)
+      console.log(currentFontSize, lineHeightDelta)
+      if (lineHeightDelta >= minLineHeight || triedCount >= maxTry) {
+        fontStyle = new PIXI.TextStyle({
+          ...style,
+          fontSize: Math.floor(this.$sizer.fromPx(currentFontSize)),
+          lineHeight: Math.floor(this.$sizer.fromPx(lineHeightDelta)),
+        })
+      } else {
+        currentFontSize -= 2
+      }
+    }
+    const text = new PIXI.Text(effectText, fontStyle)
+    text.x = this.$sizer.fromPx(52)
+    text.y = this.$sizer.fromPx(805)
+    this.$app.stage.addChild(text)
+  }
+
+  /**
+   * 绘制攻击力
+   */
+  protected async drawAtk(atk: string) {
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'MatrixBoldSmallCaps',
+      strokeThickness: 0,
+      stroke: '#000',
+      fontSize: this.$sizer.fromPx(30),
+    })
+    const text = new PIXI.Text(atk, fontStyle)
+    text.anchor.set(1, 0)
+    text.x = this.$sizer.fromPx(507)
+    text.y = this.$sizer.fromPx(948)
+    this.$app.stage.addChild(text)
+  }
+
+  /**
+   * 绘制防御力
+   */
+  protected async drawDef(def: string) {
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'MatrixBoldSmallCaps',
+      strokeThickness: 0,
+      stroke: '#000',
+      fontSize: this.$sizer.fromPx(30),
+    })
+    const text = new PIXI.Text(def, fontStyle)
+    text.anchor.set(1, 0)
+    text.x = this.$sizer.fromPx(647)
+    text.y = this.$sizer.fromPx(948)
     this.$app.stage.addChild(text)
   }
 }

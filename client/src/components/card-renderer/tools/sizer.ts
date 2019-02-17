@@ -14,4 +14,10 @@ export class Sizer {
     const rst = (px * now) / this.basic
     return +rst.toFixed(2)
   }
+
+  reverseResult(rst: number) {
+    const now = this.app.view.width / 2
+    const px = (rst * this.basic) / now
+    return +px.toFixed(2)
+  }
 }

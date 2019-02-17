@@ -8,7 +8,7 @@ export enum TCardType {
   SYNCHRO, // 同调
   XYZ, // 超量
   LINK, // 链接
-  PENDULUM // 灵摆
+  PENDULUM, // 灵摆
 }
 
 export enum TMonsterAttribute {
@@ -17,11 +17,11 @@ export enum TMonsterAttribute {
   WATER,
   DARK,
   EARTH,
-  LIGHT
+  LIGHT,
 }
 
 export enum TLevel {
-  LEVEL = 1
+  LEVEL = 1,
 }
 
 export interface IBaseCard {
@@ -29,13 +29,17 @@ export interface IBaseCard {
   cardCode: string
   name: string
   type: TCardType
+  extra: any
+  series: string
 }
 
-export interface IBaseMonsterCard extends IBaseCard {
-  attribute: TMonsterAttribute
-}
-
-export interface IEffectCard extends IBaseMonsterCard {
-  level: number
-  effectText: string
+export interface IEffectMonsterCard extends IBaseCard {
+  extra: {
+    level: number
+    attribute: TMonsterAttribute
+    effectText: string
+    atk: string
+    def: string
+    types: string[]
+  }
 }
