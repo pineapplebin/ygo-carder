@@ -117,14 +117,14 @@ export abstract class BaseCardTemplate {
    */
   protected async drawCardCode(cardCode: string) {
     const fontStyle = new PIXI.TextStyle({
-      fontFamily: 'MatrixBoldSmallCaps',
+      fontFamily: 'Stone Serif',
       strokeThickness: 0,
       stroke: '#000',
-      fontSize: this.$sizer.fromPx(20),
+      fontSize: this.$sizer.fromPx(16),
     })
     const text = new PIXI.Text(cardCode, fontStyle)
     text.x = this.$sizer.fromPx(30)
-    text.y = this.$sizer.fromPx(990)
+    text.y = this.$sizer.fromPx(986)
     this.$app.stage.addChild(text)
   }
 
