@@ -59,6 +59,18 @@ export interface IEffectMonsterCard extends IBaseCard {
   }
 }
 
+export interface IXyzMonsterCard extends IBaseCard {
+  extra: {
+    rank: number
+    attribute: TMonsterAttribute
+    effectText: string
+    atk: string
+    def: string
+    types: string[]
+    condition: string
+  }
+}
+
 export interface ISpellCard extends IBaseCard {
   extra: {
     type: TSpellTrapType

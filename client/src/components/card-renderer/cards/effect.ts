@@ -9,7 +9,7 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
       cardCode,
       name,
       series,
-      extra: { attribute, level, effectText, atk, def },
+      extra: { attribute, level, effectText, atk, def, types },
     } = card
 
     this.drawBackground()
@@ -20,7 +20,7 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
     this.drawAttribute(attribute)
     this.drawCardImage(card)
     this.drawLevel(level)
-    this.drawInformation(card)
+    this.drawInformation(types)
     this.drawEffectText(effectText, {
       width: 608,
       height: 133,

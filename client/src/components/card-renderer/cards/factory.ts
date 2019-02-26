@@ -7,6 +7,7 @@ import { EffectCardTemplate } from './effect'
 import { LinkCardTemplate } from './link'
 import { SpellCardTemplate } from './spell'
 import { TrapCardTemplate } from './trap'
+import { XyzCardTemplate } from './xyz'
 
 interface IFactoryParam {
   type: TCardType
@@ -21,6 +22,9 @@ export function templateFactory(params: IFactoryParam): BaseCardTemplate {
   switch (type) {
     case TCardType.EFFECT:
       instance = new EffectCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.XYZ:
+      instance = new XyzCardTemplate($loader, $sizer, $app)
       break
     case TCardType.LINK:
       instance = new LinkCardTemplate($loader, $sizer, $app)

@@ -122,11 +122,12 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制卡片号码
    */
-  protected async drawCardCode(cardCode: string) {
+  protected async drawCardCode(cardCode: string, opt?: { color: string }) {
+    const options = Object.assign({color: '#000'}, opt || {})
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
       strokeThickness: 0,
-      stroke: '#000',
+      fill: options.color,
       fontSize: this.$sizer.fromPx(18),
     })
     const text = new PIXI.Text(cardCode, fontStyle)
@@ -138,11 +139,12 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制系列号码
    */
-  protected async drawSeries(series: string) {
+  protected async drawSeries(series: string, opt?: { color: string }) {
+    const options = Object.assign({ color: '#000' }, opt || {})
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
       strokeThickness: 0,
-      stroke: '#000',
+      fill: options.color,
       fontSize: this.$sizer.fromPx(20),
     })
     const text = new PIXI.Text(series, fontStyle)
@@ -228,14 +230,14 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
   /**
    * 绘制卡牌信息（种族等）
    */
-  protected async drawInformation(card: IEffectMonsterCard) {
+  protected async drawInformation(types: string[]) {
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
       fontSize: Math.floor(this.$sizer.fromPx(26)),
       strokeThickness: 0.4,
       stroke: '#000',
     })
-    const text = new PIXI.Text(`【${card.extra.types.join('/')}】`, fontStyle)
+    const text = new PIXI.Text(`【${types.join('/')}】`, fontStyle)
     text.x = this.$sizer.fromPx(37)
     text.y = this.$sizer.fromPx(778)
     text.scale.set(1, 0.95)

@@ -10,6 +10,7 @@ import pAttrTrap from '../../../../assets/attribute-trap.png'
 import pLevel from '../../../../assets/level.png'
 
 import pCardEffect from '../../../../assets/card-effect.png'
+import pCardXyz from '../../../../assets/card-xyz.png'
 import pCardLink from '../../../../assets/card-link.png'
 import pCardSpell from '../../../../assets/card-spell.png'
 import pCardTrap from '../../../../assets/card-trap.png'
@@ -32,6 +33,7 @@ import {
 export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   // background
   { name: `bg-${TCardType.EFFECT}`, url: pCardEffect },
+  { name: `bg-${TCardType.XYZ}`, url: pCardXyz },
   { name: `bg-${TCardType.LINK}`, url: pCardLink },
   { name: `bg-${TCardType.SPELL}`, url: pCardSpell },
   { name: `bg-${TCardType.TRAP}`, url: pCardTrap },
