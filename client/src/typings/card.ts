@@ -20,8 +20,23 @@ export enum TMonsterAttribute {
   LIGHT,
 }
 
+export enum TSpellTrapAttribute {
+  SPELL = 10,
+  TRAP,
+}
+
 export enum TLevel {
   LEVEL = 1,
+}
+
+export enum TSpellTrapType {
+  NONE = 0,
+  COUNTER,
+  CONTINUOUS,
+  EQUIPMENT,
+  FIELD,
+  QUICK_PLAY,
+  RITUAL,
 }
 
 export interface IBaseCard {
@@ -41,5 +56,12 @@ export interface IEffectMonsterCard extends IBaseCard {
     atk: string
     def: string
     types: string[]
+  }
+}
+
+export interface ISpellCard extends IBaseCard {
+  extra: {
+    type: TSpellTrapType
+    effectText: string
   }
 }

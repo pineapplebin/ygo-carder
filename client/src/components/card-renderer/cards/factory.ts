@@ -5,6 +5,8 @@ import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
 import { EffectCardTemplate } from './effect'
 import { LinkCardTemplate } from './link'
+import { SpellCardTemplate } from './spell'
+import { TrapCardTemplate } from './trap'
 
 interface IFactoryParam {
   type: TCardType
@@ -22,6 +24,12 @@ export function templateFactory(params: IFactoryParam): BaseCardTemplate {
       break
     case TCardType.LINK:
       instance = new LinkCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.SPELL:
+      instance = new SpellCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.TRAP:
+      instance = new TrapCardTemplate($loader, $sizer, $app)
       break
     default:
       throw new Error('unknown type: ' + type)
