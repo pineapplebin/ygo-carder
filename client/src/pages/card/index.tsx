@@ -38,7 +38,9 @@ export function Card(props: IRouteProps) {
   }, [id])
 
   return (
-    <div>
+    <div
+      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+    >
       <h2>{cardList[index] && cardList[index].cardCode}</h2>
       <CardList list={cardList} onClick={(idx) => setIndex(idx)} />
       {cardList[index] && (

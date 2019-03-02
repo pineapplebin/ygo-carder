@@ -123,7 +123,7 @@ export abstract class BaseCardTemplate {
    * 绘制卡片号码
    */
   protected async drawCardCode(cardCode: string, opt?: { color: string }) {
-    const options = Object.assign({color: '#000'}, opt || {})
+    const options = Object.assign({ color: '#000' }, opt || {})
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
       strokeThickness: 0,
@@ -161,7 +161,7 @@ export abstract class BaseCardTemplate {
   protected async drawEffectText(effectText: string, size: ISizeParam) {
     const { width, height, x, y } = size
     let triedCount = 0
-    let currentFontSize = 22
+    let currentFontSize = 21
     let fontStyle = null
     const style = {
       fontFamily: 'YGOCN',
@@ -171,11 +171,11 @@ export abstract class BaseCardTemplate {
       wordWrap: true,
       wordWrapWidth: this.$sizer.fromPx(width),
     }
-    const minLineHeight = 22
     const maxHeight = this.$sizer.fromPx(height)
     const maxTry = 4
     while (triedCount++ < maxTry) {
-      const lineHeight = 25
+      const minLineHeight = currentFontSize
+      const lineHeight = currentFontSize + 3
       fontStyle = new PIXI.TextStyle({
         ...style,
         fontSize: Math.floor(this.$sizer.fromPx(currentFontSize)),
@@ -275,6 +275,22 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
     text.anchor.set(1, 0)
     text.x = this.$sizer.fromPx(647)
     text.y = this.$sizer.fromPx(948)
+    this.$app.stage.addChild(text)
+  }
+
+  /**
+   * 绘制条件
+   */
+  protected async drawCondition(condition: string) {
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'YGOCN',
+      strokeThickness: 0.2,
+      stroke: '#000',
+      fontSize: this.$sizer.fromPx(21),
+    })
+    const text = new PIXI.Text(condition, fontStyle)
+    text.x = this.$sizer.fromPx(52)
+    text.y = this.$sizer.fromPx(806)
     this.$app.stage.addChild(text)
   }
 }

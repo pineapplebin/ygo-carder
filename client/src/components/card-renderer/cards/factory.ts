@@ -8,6 +8,10 @@ import { LinkCardTemplate } from './link'
 import { SpellCardTemplate } from './spell'
 import { TrapCardTemplate } from './trap'
 import { XyzCardTemplate } from './xyz'
+import { NormalCardTemplate } from './normal'
+import { RitualCardTemplate } from './ritual'
+import { SynchroCardTemplate } from './synchro'
+import { FusionCardTemplate } from './fusion'
 
 interface IFactoryParam {
   type: TCardType
@@ -22,6 +26,18 @@ export function templateFactory(params: IFactoryParam): BaseCardTemplate {
   switch (type) {
     case TCardType.EFFECT:
       instance = new EffectCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.NORMAL:
+      instance = new NormalCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.RITUAL:
+      instance = new RitualCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.FUSION:
+      instance = new FusionCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.SYNCHRO:
+      instance = new SynchroCardTemplate($loader, $sizer, $app)
       break
     case TCardType.XYZ:
       instance = new XyzCardTemplate($loader, $sizer, $app)

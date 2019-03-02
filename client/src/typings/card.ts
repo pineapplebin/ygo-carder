@@ -27,6 +27,7 @@ export enum TSpellTrapAttribute {
 
 export enum TLevel {
   LEVEL = 1,
+  RANK,
 }
 
 export enum TSpellTrapType {
@@ -53,6 +54,31 @@ export interface IEffectMonsterCard extends IBaseCard {
     level: number
     attribute: TMonsterAttribute
     effectText: string
+    atk: string
+    def: string
+    types: string[]
+  }
+}
+
+export interface IRitualMonsterCard extends IEffectMonsterCard {}
+
+export interface ISynchroMonsterCard extends IBaseCard {
+  extra: {
+    level: number
+    attribute: TMonsterAttribute
+    effectText: string
+    atk: string
+    def: string
+    types: string[]
+    condition: string
+  }
+}
+
+export interface INormalMonsterCard extends IBaseCard {
+  extra: {
+    level: number
+    attribute: TMonsterAttribute
+    descText: string
     atk: string
     def: string
     types: string[]

@@ -1,5 +1,5 @@
 import { BaseMonsterCardTemplate } from './classes'
-import { TCardType, IXyzMonsterCard } from '@/typings/card'
+import { TCardType, IXyzMonsterCard, TLevel } from '@/typings/card'
 
 export class XyzCardTemplate extends BaseMonsterCardTemplate {
   $type = TCardType.XYZ
@@ -19,15 +19,30 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
 
     this.drawAttribute(attribute)
     this.drawCardImage(card)
-    // this.drawLevel(level)
+    this.drawRank(rank)
     this.drawInformation(types)
+    this.drawCondition(condition)
     this.drawEffectText(effectText, {
       width: 608,
-      height: 133,
+      height: 108,
       x: 52,
-      y: 806,
+      y: 830,
     })
     this.drawAtk(atk)
     this.drawDef(def)
+  }
+
+  private drawRank(rank: number) {
+    const x = 67
+    const y = 125
+    for (let i = 0; i < rank; i++) {
+      this.drawElement({
+        name: `level-${TLevel.RANK}`,
+        x: x + i * 48,
+        y,
+        width: 45,
+        height: 45,
+      })
+    }
   }
 }

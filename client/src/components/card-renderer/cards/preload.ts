@@ -8,8 +8,13 @@ import pAttrSpell from '../../../../assets/attribute-spell.png'
 import pAttrTrap from '../../../../assets/attribute-trap.png'
 
 import pLevel from '../../../../assets/level.png'
+import pRank from '../../../../assets/rank.png'
 
 import pCardEffect from '../../../../assets/card-effect.png'
+import pCardNormal from '../../../../assets/card-normal.png'
+import pCardRitual from '../../../../assets/card-ritual.png'
+import pCardFusion from '../../../../assets/card-fusion.png'
+import pCardSynchro from '../../../../assets/card-synchro.png'
 import pCardXyz from '../../../../assets/card-xyz.png'
 import pCardLink from '../../../../assets/card-link.png'
 import pCardSpell from '../../../../assets/card-spell.png'
@@ -33,6 +38,10 @@ import {
 export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   // background
   { name: `bg-${TCardType.EFFECT}`, url: pCardEffect },
+  { name: `bg-${TCardType.NORMAL}`, url: pCardNormal },
+  { name: `bg-${TCardType.RITUAL}`, url: pCardRitual },
+  { name: `bg-${TCardType.FUSION}`, url: pCardFusion },
+  { name: `bg-${TCardType.SYNCHRO}`, url: pCardSynchro },
   { name: `bg-${TCardType.XYZ}`, url: pCardXyz },
   { name: `bg-${TCardType.LINK}`, url: pCardLink },
   { name: `bg-${TCardType.SPELL}`, url: pCardSpell },
@@ -55,4 +64,5 @@ export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   { name: `type-${TSpellTrapType.EQUIPMENT}`, url: pTypeEquipment },
   // level
   { name: `level-${TLevel.LEVEL}`, url: pLevel },
+  { name: `level-${TLevel.RANK}`, url: pRank },
 ]
