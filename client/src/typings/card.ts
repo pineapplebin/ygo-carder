@@ -103,3 +103,15 @@ export interface ISpellCard extends IBaseCard {
     effectText: string
   }
 }
+
+export interface ILinkMonsterCard extends IBaseCard {
+  extra: {
+    effectText: string
+    attribute: TMonsterAttribute
+    atk: string
+    link: string
+    types: string[]
+    condition: string
+    direction: number[]
+  }
+}

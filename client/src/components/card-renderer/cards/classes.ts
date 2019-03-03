@@ -13,6 +13,8 @@ import { Sizer } from '../tools/sizer'
 
 interface IDrawElementParam extends ISizeParam {
   name: string
+  afterCreated?: (target: PIXI.Sprite) => void
+  beforeAppend?: (target: PIXI.Sprite) => void
 }
 
 interface ISizeParam {
@@ -42,10 +44,16 @@ export abstract class BaseCardTemplate {
       throw new Error(`texture name: ${params.name} can not found`)
     }
     const sprite = new PIXI.Sprite(texture)
+    if (params.afterCreated) {
+      params.afterCreated(sprite)
+    }
     sprite.x = this.$sizer.fromPx(params.x)
     sprite.y = this.$sizer.fromPx(params.y)
     sprite.width = this.$sizer.fromPx(params.width)
     sprite.height = this.$sizer.fromPx(params.height)
+    if (params.beforeAppend) {
+      params.beforeAppend(sprite)
+    }
     this.$app.stage.addChild(sprite)
   }
 
@@ -139,8 +147,11 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制系列号码
    */
-  protected async drawSeries(series: string, opt?: { color: string }) {
-    const options = Object.assign({ color: '#000' }, opt || {})
+  protected async drawSeries(
+    series: string,
+    opt?: { x?: number; y?: number; color?: string }
+  ) {
+    const options = Object.assign({ color: '#000', x: 633, y: 740 }, opt || {})
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
       strokeThickness: 0,
@@ -149,8 +160,8 @@ export abstract class BaseCardTemplate {
     })
     const text = new PIXI.Text(series, fontStyle)
     text.anchor.set(1, 0)
-    text.x = this.$sizer.fromPx(633)
-    text.y = this.$sizer.fromPx(740)
+    text.x = this.$sizer.fromPx(options.x)
+    text.y = this.$sizer.fromPx(options.y)
     this.$app.stage.addChild(text)
   }
 

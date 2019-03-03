@@ -27,6 +27,13 @@ import pTypeQuickPlay from '../../../../assets/type-quickplay.png'
 import pTypeRitual from '../../../../assets/type-ritual.png'
 import pTypeEquipment from '../../../../assets/type-equipment.png'
 
+import pLinkParkVerticalOff from '../../../../assets/link-mark-vertical-off.png'
+import pLinkParkVerticalOn from '../../../../assets/link-mark-vertical-on.png'
+import pLinkParkHorizontalOff from '../../../../assets/link-mark-horizontal-off.png'
+import pLinkParkHorizontalOn from '../../../../assets/link-mark-horizontal-on.png'
+import pLinkParkDiagonalOff from '../../../../assets/link-mark-diagonal-off.png'
+import pLinkParkDiagonalOn from '../../../../assets/link-mark-diagonal-on.png'
+
 import {
   TCardType,
   TMonsterAttribute,
@@ -65,4 +72,11 @@ export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   // level
   { name: `level-${TLevel.LEVEL}`, url: pLevel },
   { name: `level-${TLevel.RANK}`, url: pRank },
+  // link mark
+  { name: 'link-mark-vertical-off', url: pLinkParkVerticalOff },
+  { name: 'link-mark-vertical-on', url: pLinkParkVerticalOn },
+  { name: 'link-mark-horizontal-off', url: pLinkParkHorizontalOff },
+  { name: 'link-mark-horizontal-on', url: pLinkParkHorizontalOn },
+  { name: 'link-mark-diagonal-off', url: pLinkParkDiagonalOff },
+  { name: 'link-mark-diagonal-on', url: pLinkParkDiagonalOn },
 ]
