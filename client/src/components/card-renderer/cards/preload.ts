@@ -34,6 +34,8 @@ import pLinkParkHorizontalOn from '../../../../assets/link-mark-horizontal-on.pn
 import pLinkParkDiagonalOff from '../../../../assets/link-mark-diagonal-off.png'
 import pLinkParkDiagonalOn from '../../../../assets/link-mark-diagonal-on.png'
 
+import pLightIcon from '../../../../assets/light-icon.png'
+
 import {
   TCardType,
   TMonsterAttribute,
@@ -79,4 +81,6 @@ export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   { name: 'link-mark-horizontal-on', url: pLinkParkHorizontalOn },
   { name: 'link-mark-diagonal-off', url: pLinkParkDiagonalOff },
   { name: 'link-mark-diagonal-on', url: pLinkParkDiagonalOn },
+  // others
+  { name: 'light-icon', url: pLightIcon },
 ]

@@ -9,6 +9,7 @@ export class TrapCardTemplate extends SpellTrapCardTemplate {
       cardCode,
       name,
       series,
+      year,
       extra: { effectText, type },
     } = card
 
@@ -16,8 +17,9 @@ export class TrapCardTemplate extends SpellTrapCardTemplate {
     this.drawCardName(name, { color: '#fff' })
     this.drawCardCode(cardCode)
     this.drawSeries(series)
-    this.drawType(TCardType.TRAP, type)
+    this.drawCopyrightInfo(year)
 
+    this.drawType(TCardType.TRAP, type)
     this.drawCardImage(card)
     this.drawAttribute(TSpellTrapAttribute.TRAP)
     this.drawEffectText(effectText, {

@@ -47,6 +47,7 @@ export interface IBaseCard {
   type: TCardType
   extra: any
   series: string
+  year: string
 }
 
 export interface IEffectMonsterCard extends IBaseCard {

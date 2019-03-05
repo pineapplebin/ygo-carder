@@ -9,6 +9,7 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
       cardCode,
       name,
       series,
+      year,
       extra: { attribute, rank, effectText, atk, def, condition, types },
     } = card
 
@@ -16,6 +17,7 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
     this.drawCardName(name, { color: '#fff' })
     this.drawCardCode(cardCode, { color: '#fff' })
     this.drawSeries(series, { color: '#fff' })
+    this.drawCopyrightInfo(year, { color: '#fff' })
 
     this.drawAttribute(attribute)
     this.drawCardImage(card)

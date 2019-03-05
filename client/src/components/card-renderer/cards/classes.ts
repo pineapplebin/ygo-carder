@@ -218,6 +218,31 @@ export abstract class BaseCardTemplate {
     text.y = this.$sizer.fromPx(y)
     this.$app.stage.addChild(text)
   }
+
+  /**
+   * 绘制版权信息
+   */
+  protected drawCopyrightInfo(year: string, opt?: { color?: string }) {
+    const options = { color: '#000', ...opt }
+    this.drawElement({
+      name: 'light-icon',
+      width: 35,
+      height: 35,
+      x: 655,
+      y: 980,
+    })
+    const fontStyle = new PIXI.TextStyle({
+      fontFamily: 'Stone Serif',
+      strokeThickness: 0,
+      fill: options.color,
+      fontSize: this.$sizer.fromPx(18),
+    })
+    const text = new PIXI.Text(`◎ ${year || ''} YU-GI-OH`, fontStyle)
+    text.anchor.set(1, 0)
+    text.x = this.$sizer.fromPx(650)
+    text.y = this.$sizer.fromPx(985)
+    this.$app.stage.addChild(text)
+  }
 }
 
 export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
@@ -284,7 +309,7 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
     })
     const text = new PIXI.Text(def, fontStyle)
     text.anchor.set(1, 0)
-    text.x = this.$sizer.fromPx(647)
+    text.x = this.$sizer.fromPx(648)
     text.y = this.$sizer.fromPx(948)
     this.$app.stage.addChild(text)
   }

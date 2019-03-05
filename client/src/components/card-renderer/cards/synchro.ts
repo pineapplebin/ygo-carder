@@ -9,6 +9,7 @@ export class SynchroCardTemplate extends BaseMonsterCardTemplate {
       cardCode,
       name,
       series,
+      year,
       extra: { attribute, level, effectText, atk, def, types, condition },
     } = card
 
@@ -16,6 +17,7 @@ export class SynchroCardTemplate extends BaseMonsterCardTemplate {
     this.drawCardName(name)
     this.drawCardCode(cardCode)
     this.drawSeries(series)
+    this.drawCopyrightInfo(year)
 
     this.drawAttribute(attribute)
     this.drawCardImage(card)
