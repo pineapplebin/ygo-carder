@@ -25,7 +25,7 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
     this.drawInformation(types)
     this.drawCondition(condition)
     this.drawEffectText(effectText, {
-      width: 608,
+      width: 607,
       height: 108,
       x: 52,
       y: 830,

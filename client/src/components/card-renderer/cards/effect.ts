@@ -24,7 +24,7 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
     this.drawLevel(level)
     this.drawInformation(types)
     this.drawEffectText(effectText, {
-      width: 608,
+      width: 607,
       height: 133,
       x: 52,
       y: 806,

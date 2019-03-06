@@ -23,7 +23,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     this.drawInformation(types)
     this.drawCondition(condition)
     this.drawEffectText(effectText, {
-      width: 608,
+      width: 607,
       height: 108,
       x: 52,
       y: 830,
@@ -124,7 +124,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     })
     // 右下
     this.drawElement({
-      name: `link-mark-diagonal-${isOnOff(7)}`,
+      name: `link-mark-diagonal-${isOnOff(9)}`,
       width: 65,
       height: 65,
       x: 622,
