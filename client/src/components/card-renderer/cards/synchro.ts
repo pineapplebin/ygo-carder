@@ -25,7 +25,7 @@ export class SynchroCardTemplate extends BaseMonsterCardTemplate {
     this.drawInformation(types)
     this.drawCondition(condition)
     this.drawEffectText(effectText, {
-      width: 607,
+      width: 605,
       height: 108,
       x: 52,
       y: 830,

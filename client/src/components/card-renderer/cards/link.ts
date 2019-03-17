@@ -23,7 +23,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     this.drawInformation(types)
     this.drawCondition(condition)
     this.drawEffectText(effectText, {
-      width: 607,
+      width: 605,
       height: 108,
       x: 52,
       y: 830,
@@ -48,7 +48,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
       width: 122,
       height: 40,
       x: 355,
-      y: 168,
+      y: 170,
       beforeAppend: (target) => {
         target.anchor.set(0.5, 0.5)
         target.rotation = Math.PI * 2 * 0.5
@@ -60,7 +60,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
       width: 122,
       height: 40,
       x: 355,
-      y: 751,
+      y: 750,
       beforeAppend: (target) => {
         target.anchor.set(0.5, 0.5)
       },
@@ -68,18 +68,18 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     // 正左
     this.drawElement({
       name: `link-mark-horizontal-${isOnOff(4)}`,
-      width: 40,
-      height: 117,
-      x: 44,
-      y: 394,
+      width: 44,
+      height: 121,
+      x: 42,
+      y: 398,
     })
     // 正右
     this.drawElement({
       name: `link-mark-horizontal-${isOnOff(6)}`,
-      width: 40,
-      height: 117,
+      width: 44,
+      height: 121,
       x: 626,
-      y: 394,
+      y: 398,
       afterCreated: (target) => {
         target.anchor.set(0.5, 0.5)
         target.rotation = Math.PI * 2 * 0.5
@@ -89,8 +89,8 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     // 左上
     this.drawElement({
       name: `link-mark-diagonal-${isOnOff(1)}`,
-      width: 65,
-      height: 65,
+      width: 69,
+      height: 69,
       x: 90,
       y: 195,
       beforeAppend: (target) => {
@@ -101,8 +101,8 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     // 右上
     this.drawElement({
       name: `link-mark-diagonal-${isOnOff(3)}`,
-      width: 65,
-      height: 65,
+      width: 69,
+      height: 69,
       x: 622,
       y: 195,
       beforeAppend: (target) => {
@@ -113,8 +113,8 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     // 左下
     this.drawElement({
       name: `link-mark-diagonal-${isOnOff(7)}`,
-      width: 65,
-      height: 65,
+      width: 69,
+      height: 69,
       x: 90,
       y: 725,
       beforeAppend: (target) => {
@@ -125,8 +125,8 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     // 右下
     this.drawElement({
       name: `link-mark-diagonal-${isOnOff(9)}`,
-      width: 65,
-      height: 65,
+      width: 69,
+      height: 69,
       x: 622,
       y: 725,
       beforeAppend: (target) => {

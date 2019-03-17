@@ -1,0 +1,51 @@
+{
+  "code": 0,
+  "data": {
+    "list": [
+      {
+        "series": "PS-43",
+        "type": 1,
+        "name": "杀手番茄",
+        "cardCode": "83011277",
+        "imageUrl": "http://pine.me/ygo/83011277.png",
+        "year": "2000",
+        "extra": {
+          "level": 4,
+          "attribute": 4,
+          "effectText": "这张卡被战斗破坏送去墓地时，可以从自己卡组把1只攻击力1500以下的暗属性怪兽在自己场上表侧攻击表示特殊召唤。",
+          "types": ["植物族", "效果"],
+          "atk": "1400",
+          "def": "1100"
+        }
+      },
+      {
+        "series": "BE1-JP099",
+        "type": 2,
+        "name": "独眼巨人",
+        "cardCode": "76184692",
+        "imageUrl": "http://pine.me/ygo/76184692.png",
+        "year": "1999",
+        "extra": {
+          "level": 4,
+          "attribute": 4,
+          "effectText": "只长有一只眼睛的巨人。利用巨腕殴打敌人，值得小心。",
+          "types": ["兽战士族", "通常"],
+          "atk": "1200",
+          "def": "1000"
+        }
+      },
+      {
+        "series": "ST17-JP023",
+        "type": 5,
+        "name": "黑洞",
+        "cardCode": "53129443",
+        "imageUrl": "http://pine.me/ygo/53129443.png",
+        "year": "1999",
+        "extra": {
+          "effectText": "①：场上的怪兽全部破坏。",
+          "type": 0
+        }
+      }
+    ]
+  }
+}

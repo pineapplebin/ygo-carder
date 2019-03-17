@@ -12,12 +12,12 @@ export class Sizer {
   fromPx(px: number) {
     const now = this.app.view.width / 2
     const rst = (px * now) / this.basic
-    return +rst.toFixed(2)
+    return +rst.toPrecision(12)
   }
 
   reverseResult(rst: number) {
     const now = this.app.view.width / 2
     const px = (rst * this.basic) / now
-    return +px.toFixed(2)
+    return +px.toPrecision(12)
   }
 }

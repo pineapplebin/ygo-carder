@@ -34,6 +34,10 @@ import pLinkParkHorizontalOn from '../../../../assets/link-mark-horizontal-on.pn
 import pLinkParkDiagonalOff from '../../../../assets/link-mark-diagonal-off.png'
 import pLinkParkDiagonalOn from '../../../../assets/link-mark-diagonal-on.png'
 
+import pPendulumBackgroundSm from '../../../../assets/card-pendulum-sm.png'
+import pPendulumBackgroundMd from '../../../../assets/card-pendulum-md.png'
+import pPendulumBackgroundLg from '../../../../assets/card-pendulum-lg.png'
+
 import pLightIcon from '../../../../assets/light-icon.png'
 
 import {
@@ -81,6 +85,10 @@ export const PRELOAD_IMAGE: Array<{ name: string; url: string }> = [
   { name: 'link-mark-horizontal-on', url: pLinkParkHorizontalOn },
   { name: 'link-mark-diagonal-off', url: pLinkParkDiagonalOff },
   { name: 'link-mark-diagonal-on', url: pLinkParkDiagonalOn },
+  // pendulum
+  { name: 'pendulum-background-sm', url: pPendulumBackgroundSm },
+  { name: 'pendulum-background-md', url: pPendulumBackgroundMd },
+  { name: 'pendulum-background-lg', url: pPendulumBackgroundLg },
   // others
   { name: 'light-icon', url: pLightIcon },
 ]

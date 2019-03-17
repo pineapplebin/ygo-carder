@@ -1,3 +1,4 @@
+import * as PIXI from 'pixi.js'
 import { BaseMonsterCardTemplate } from './classes'
 import { TCardType, IEffectMonsterCard } from '@/typings/card'
 
@@ -24,7 +25,7 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
     this.drawLevel(level)
     this.drawInformation(types)
     this.drawEffectText(effectText, {
-      width: 607,
+      width: 605,
       height: 133,
       x: 52,
       y: 806,

@@ -10,6 +10,7 @@ import {
 } from '@/typings/card'
 import { Loader } from '../tools/loader'
 import { Sizer } from '../tools/sizer'
+import { isHansChar, isSpecialChar, isHansPunctuation } from '../tools/util'
 
 interface IDrawElementParam extends ISizeParam {
   name: string
@@ -60,9 +61,9 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制背景
    */
-  protected drawBackground() {
+  protected drawBackground(type?: TCardType) {
     this.drawElement({
-      name: `bg-${this.$type}`,
+      name: `bg-${type || this.$type}`,
       x: 0,
       y: 0,
       width: 710,
@@ -78,7 +79,7 @@ export abstract class BaseCardTemplate {
     const opt = Object.assign({ color: '#000' }, options)
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
-      fontSize: Math.floor(this.$sizer.fromPx(48)),
+      fontSize: Math.floor(this.$sizer.fromPx(54)),
       strokeThickness: 0.5,
       stroke: opt.color,
       fill: opt.color,
@@ -87,7 +88,7 @@ export abstract class BaseCardTemplate {
     const maxWidth = this.$sizer.fromPx(526)
     const text = new PIXI.Text(name, fontStyle)
     text.x = this.$sizer.fromPx(55)
-    text.y = this.$sizer.fromPx(50)
+    text.y = this.$sizer.fromPx(45)
     const measure = PIXI.TextMetrics.measureText(name, fontStyle)
     if (measure.width > maxWidth) {
       text.scale.x = maxWidth / measure.width
@@ -114,16 +115,17 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制卡图
    */
-  protected async drawCardImage(card: IBaseCard) {
+  protected async drawCardImage(card: IBaseCard, options?: ISizeParam) {
+    const { x = 83, y = 188, width = 544, height = 544 } = options || {}
     const name = `card-${card.cardCode}`
     const textures = await this.$loader.loadTexture([
       { name, url: card.imageUrl },
     ])
     const sprite = new PIXI.Sprite(textures[name])
-    sprite.x = this.$sizer.fromPx(83)
-    sprite.y = this.$sizer.fromPx(188)
-    sprite.width = this.$sizer.fromPx(544)
-    sprite.height = this.$sizer.fromPx(544)
+    sprite.x = this.$sizer.fromPx(x)
+    sprite.y = this.$sizer.fromPx(y)
+    sprite.width = this.$sizer.fromPx(width)
+    sprite.height = this.$sizer.fromPx(height)
     this.$app.stage.addChild(sprite)
   }
 
@@ -131,6 +133,9 @@ export abstract class BaseCardTemplate {
    * 绘制卡片号码
    */
   protected async drawCardCode(cardCode: string, opt?: { color: string }) {
+    if (!/^\d+$/.test(cardCode)) {
+      return
+    }
     const options = Object.assign({ color: '#000' }, opt || {})
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
@@ -149,7 +154,7 @@ export abstract class BaseCardTemplate {
    */
   protected async drawSeries(
     series: string,
-    opt?: { x?: number; y?: number; color?: string }
+    opt?: { x?: number; y?: number; color?: string; alignLeft?: boolean }
   ) {
     const options = Object.assign({ color: '#000', x: 633, y: 740 }, opt || {})
     const fontStyle = new PIXI.TextStyle({
@@ -159,7 +164,9 @@ export abstract class BaseCardTemplate {
       fontSize: this.$sizer.fromPx(20),
     })
     const text = new PIXI.Text(series, fontStyle)
-    text.anchor.set(1, 0)
+    if (!options.alignLeft) {
+      text.anchor.set(1, 0)
+    }
     text.x = this.$sizer.fromPx(options.x)
     text.y = this.$sizer.fromPx(options.y)
     this.$app.stage.addChild(text)
@@ -168,8 +175,9 @@ export abstract class BaseCardTemplate {
   /**
    * 绘制效果文本
    * 根据内容长度压缩大小
+   * @deprecated
    */
-  protected async drawEffectText(effectText: string, size: ISizeParam) {
+  protected async drawEffectTextOld(effectText: string, size: ISizeParam) {
     const { width, height, x, y } = size
     let triedCount = 0
     let currentFontSize = 21
@@ -220,16 +228,98 @@ export abstract class BaseCardTemplate {
   }
 
   /**
+   * 绘制效果文本
+   * 自动换行，且右边界对齐
+   */
+  protected drawEffectText(text: string, size: ISizeParam) {
+    const parsedSize = {
+      x: this.$sizer.fromPx(size.x),
+      y: this.$sizer.fromPx(size.y),
+      width: this.$sizer.fromPx(size.width),
+      height: this.$sizer.fromPx(size.height),
+    }
+    let currentFontSize = 21
+    let halfFontSize = currentFontSize / 2
+    const style = {
+      fontFamily: 'YGOCN',
+      strokeThickness: 0.2,
+      stroke: '#000',
+    }
+    let isPass = false
+    let lines = null
+    while (!isPass) {
+      lines = [{ content: '', isFull: false }]
+      let currentLine = 0
+      let lineWidth = 0
+      for (let i = 0; i < text.length; i++) {
+        if (text[i] === '\n') {
+          lines[currentLine].isFull = false
+          lines.push({ content: '', isFull: false })
+          currentLine++
+          lineWidth = 0
+          continue
+        }
+        lines[currentLine].content += text[i]
+        const currentCharCode = text.charCodeAt(i)
+        if (isHansChar(currentCharCode) || isSpecialChar(currentCharCode)) {
+          lineWidth += currentFontSize
+        } else {
+          lineWidth += halfFontSize
+        }
+        // 如果下个字符为标点时，不换行
+        const nextChar = text[i + 1]
+        if (nextChar && isHansPunctuation(text.charCodeAt(i + 1))) {
+          continue
+        }
+        // 判断当前字符宽度
+        if (lineWidth >= parsedSize.width - halfFontSize) {
+          lines[currentLine].isFull = true
+          // 如果后面仍有字符时
+          if (i < text.length - 1) {
+            lines.push({ content: '', isFull: false })
+            currentLine++
+            lineWidth = 0
+          }
+        }
+      }
+      // 检查高度是否超出
+      const height = lines.length * currentFontSize * 1.1
+      if (height <= size.height) {
+        isPass = true
+      } else {
+        currentFontSize -= 2
+        halfFontSize = currentFontSize / 2
+      }
+      // console.log(lines.map((line) => line.content), height, size.height)
+    }
+    // 切割分行
+    // 渲染文本
+    const textStyle = new PIXI.TextStyle({
+      ...style,
+      fontSize: this.$sizer.fromPx(currentFontSize),
+    })
+    lines.forEach((line, idx) => {
+      const t = new PIXI.Text(line.content, textStyle)
+      if (line.isFull) {
+        t.width = parsedSize.width
+      }
+      t.x = parsedSize.x
+      t.y = parsedSize.y + idx * this.$sizer.fromPx(currentFontSize * 1.1)
+      this.$app.stage.addChild(t)
+    })
+  }
+
+  /**
    * 绘制版权信息
    */
   protected drawCopyrightInfo(year: string, opt?: { color?: string }) {
     const options = { color: '#000', ...opt }
     this.drawElement({
       name: 'light-icon',
-      width: 35,
-      height: 35,
-      x: 655,
-      y: 980,
+      width: 34,
+      height: 34,
+      x: 653,
+      y: 978,
     })
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'Stone Serif',
@@ -239,7 +329,7 @@ export abstract class BaseCardTemplate {
     })
     const text = new PIXI.Text(`◎ ${year || ''} YU-GI-OH`, fontStyle)
     text.anchor.set(1, 0)
-    text.x = this.$sizer.fromPx(650)
+    text.x = this.$sizer.fromPx(640)
     text.y = this.$sizer.fromPx(985)
     this.$app.stage.addChild(text)
   }

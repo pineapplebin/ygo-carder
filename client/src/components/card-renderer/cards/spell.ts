@@ -23,7 +23,7 @@ export class SpellCardTemplate extends SpellTrapCardTemplate {
     this.drawCardImage(card)
     this.drawAttribute(TSpellTrapAttribute.SPELL)
     this.drawEffectText(effectText, {
-      width: 607,
+      width: 605,
       height: 195,
       x: 52,
       y: 778,

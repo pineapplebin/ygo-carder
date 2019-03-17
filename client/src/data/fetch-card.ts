@@ -13,7 +13,7 @@ interface IMock {
 
 export async function getCardList(): Promise<IBaseCard[]> {
   const res = await request<IServerResponse<IMock>>({
-    url: '/api/dbic.json',
+    url: '/api/old-time.json',
   })
   return res.data.list
 

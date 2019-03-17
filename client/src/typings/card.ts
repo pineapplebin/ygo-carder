@@ -40,6 +40,12 @@ export enum TSpellTrapType {
   RITUAL,
 }
 
+export enum TPendulumSize {
+  LARGE = 'lg',
+  MIDDLE = 'md',
+  SMALL = 'sm',
+}
+
 export interface IBaseCard {
   imageUrl: string
   cardCode: string
@@ -114,5 +120,20 @@ export interface ILinkMonsterCard extends IBaseCard {
     types: string[]
     condition: string
     direction: number[]
+  }
+}
+
+export interface IPendulumMonsterCard extends IBaseCard {
+  extra: {
+    level: number
+    attribute: number
+    types: string[]
+    atk: string
+    def: string
+    size: TPendulumSize
+    secondType: TCardType
+    scale: string
+    effectText: string
+    pendulumEffectText: string
   }
 }

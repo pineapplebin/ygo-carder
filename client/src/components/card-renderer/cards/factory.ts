@@ -12,6 +12,7 @@ import { NormalCardTemplate } from './normal'
 import { RitualCardTemplate } from './ritual'
 import { SynchroCardTemplate } from './synchro'
 import { FusionCardTemplate } from './fusion'
+import { PendulumCardTemplate } from './pendulum'
 
 interface IFactoryParam {
   type: TCardType
@@ -50,6 +51,9 @@ export function templateFactory(params: IFactoryParam): BaseCardTemplate {
       break
     case TCardType.TRAP:
       instance = new TrapCardTemplate($loader, $sizer, $app)
+      break
+    case TCardType.PENDULUM:
+      instance = new PendulumCardTemplate($loader, $sizer, $app)
       break
     default:
       throw new Error('unknown type: ' + type)
