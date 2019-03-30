@@ -238,6 +238,11 @@ export abstract class BaseCardTemplate {
       width: this.$sizer.fromPx(size.width),
       height: this.$sizer.fromPx(size.height),
     }
+    // 测量高度
+    // const graphics = new PIXI.Graphics()
+    // graphics.beginFill(0x000)
+    // graphics.drawRect(parsedSize.x, parsedSize.y, 1, parsedSize.height)
+    // this.$app.stage.addChild(graphics)
     let currentFontSize = 21
     let halfFontSize = currentFontSize / 2
     const style = {
@@ -287,7 +292,7 @@ export abstract class BaseCardTemplate {
       if (height <= size.height) {
         isPass = true
       } else {
-        currentFontSize -= 2
+        currentFontSize -= 1
         halfFontSize = currentFontSize / 2
       }
       // console.log(lines.map((line) => line.content), height, size.height)

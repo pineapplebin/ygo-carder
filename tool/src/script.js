@@ -15,11 +15,18 @@
     const base = getBaseData(map)
     const extraMap = {
       [1]: getEffectMonsterData,
+      [2]: getEffectMonsterData,
+      [3]: getConditionMonsterData,
+      [4]: getEffectMonsterData,
       [5]: getSpellTrapData,
       [6]: getSpellTrapData,
+      [7]: getConditionMonsterData,
+      [8]: getXyzMonsterData,
+      [9]: getLinkMonsterData,
+      [10]: getPendulumMonsterData,
     }
     if (base.type in extraMap) {
-      base.extra = extraMap[base.type](map)
+      base.extra = extraMap[base.type](map, base)
     }
     console.log(JSON.stringify(base, null, 2))
   }
@@ -152,6 +159,73 @@
     extra["def"] = map["防御力"]
     extra["effectText"] = handleEffectText(map["效果"])
     extra["types"] = handleMonsterTypes(map)
+    return extra
+  }
+
+  /**
+   * 获取带条件的怪兽数据
+   */
+  function getConditionMonsterData(map) {
+    const extra = {}
+    const [condition, ...rest] = map["效果"].split("\n")
+    extra["level"] = +map["星级"]
+    extra["attribute"] = ATTRIBUTE_MAP[map["属性"]]
+    extra["atk"] = map["攻击力"]
+    extra["def"] = map["防御力"]
+    extra["effectText"] = handleEffectText(rest.join("\n"))
+    extra["types"] = handleMonsterTypes(map)
+    extra["condition"] = condition.trim()
+    return extra
+  }
+
+  /**
+   * 获取XYZ怪兽数据
+   */
+  function getXyzMonsterData(map) {
+    const extra = getConditionMonsterData(map)
+    delete extra["level"]
+    extra["rank"] = map["阶级"]
+  }
+
+  /**
+   * 获取连接怪兽数据
+   */
+  function getLinkMonsterData(map) {
+    const extra = getConditionMonsterData(map)
+    extra["link"] = map["LINK"]
+    // 方向
+    const direction = []
+    $(".linkMark")
+      .children()
+      .each((idx, el) => {
+        if (/_on/.test(el.className)) {
+          direction.push(el.className)
+        }
+      })
+    extra["direction"] = direction.map((d) => +d.match(/\d/)[0])
+    return extra
+  }
+
+  /**
+   * 获取灵摆怪兽数据
+   */
+  function getPendulumMonsterData(map) {
+    const extra = getEffectMonsterData(map)
+    extra["pendulumEffectText"] = ""
+    extra["scale"] = 0
+    extra["size"] = "md"
+    const type = map["卡片种类"]
+    if (/XYZ/.test(type)) {
+      extra["secondType"] = 8
+    } else if (/融合/.test(type)) {
+      extra["secondType"] = 3
+    } else if (/同调/.test(type)) {
+      extra["secondType"] = 7
+    } else if (/通常/.test(type)) {
+      extra["secondType"] = 2
+    } else {
+      extra["secondType"] = 1
+    }
     return extra
   }
 })()
