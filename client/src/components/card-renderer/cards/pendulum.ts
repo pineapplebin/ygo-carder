@@ -65,7 +65,7 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
   async drawPendulumCardImage(size: TPendulumSize, card: IPendulumMonsterCard) {
     const options =
       size === 'sm'
-        ? { x: 44, y: 183, width: 620, height: 460 }
+        ? { x: 44, y: 183, width: 620, height: 500 }
         : { x: 44, y: 183, width: 620, height: 460 }
     await this.drawCardImage(card, options)
   }
@@ -90,14 +90,21 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
    * 绘制灵摆效果
    */
   async drawPendulumEffectText(size: TPendulumSize, effectText: string) {
+    const options = {
+      [TPendulumSize.LARGE]: { y: 652, height: 109 },
+      [TPendulumSize.MIDDLE]: { y: 652, height: 109 },
+      [TPendulumSize.SMALL]: { y: 689, height: 78 },
+    }
     this.drawEffectText(effectText, {
       x: 108,
-      y: 652,
       width: 493,
-      height: 109,
+      ...options[size],
     })
   }
 
+  /**
+   * 绘制灵摆刻度
+   */
   async drawPendulumScale(size: TPendulumSize, scale: string) {
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'MatrixBoldSmallCaps',
@@ -105,12 +112,18 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
       stroke: '#000',
       fontSize: this.$sizer.fromPx(48),
     })
+    const options = {
+      [TPendulumSize.LARGE]: { y: 710 },
+      [TPendulumSize.MIDDLE]: { y: 710 },
+      [TPendulumSize.SMALL]: { y: 728 },
+    }[size]
+
     const left = new PIXI.Text(scale, fontStyle)
     left.x = this.$sizer.fromPx(60)
-    left.y = this.$sizer.fromPx(710)
+    left.y = this.$sizer.fromPx(options.y)
     const right = new PIXI.Text(scale, fontStyle)
     right.x = this.$sizer.fromPx(626)
-    right.y = this.$sizer.fromPx(710)
+    right.y = this.$sizer.fromPx(options.y)
 
     this.$app.stage.addChild(left)
     this.$app.stage.addChild(right)

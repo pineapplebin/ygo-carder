@@ -18,5 +18,5 @@ export function isSpecialChar(code: number) {
  * 返回是否汉字的标点
  */
 export function isHansPunctuation(code: number) {
-  return code === 65306 || code === 12290 || code === 65292
+  return code === 65306 || code === 12290 || code === 65292 || code === 12301
 }

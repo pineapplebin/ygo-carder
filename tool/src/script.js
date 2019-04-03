@@ -185,6 +185,7 @@
     const extra = getConditionMonsterData(map)
     delete extra["level"]
     extra["rank"] = map["阶级"]
+    return extra
   }
 
   /**
@@ -202,7 +203,20 @@
           direction.push(el.className)
         }
       })
-    extra["direction"] = direction.map((d) => +d.match(/\d/)[0])
+    extra["direction"] = direction
+      .map((d) => +d.match(/\d/)[0])
+      .map((dir) => {
+        return {
+          [1]: 7,
+          [2]: 8,
+          [3]: 9,
+          [4]: 4,
+          [6]: 6,
+          [7]: 1,
+          [8]: 2,
+          [9]: 3,
+        }[dir]
+      })
     return extra
   }
 
