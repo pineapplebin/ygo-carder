@@ -14,7 +14,7 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, { color: '#fff' })
+    this.drawCardName(name, this.getCardNameColor('white'))
     this.drawCardCode(cardCode)
     this.drawSeries(series, { x: 585 })
     this.drawCopyrightInfo(year)

@@ -37,6 +37,38 @@ export abstract class BaseCardTemplate {
   abstract async render(card: IBaseCard): Promise<void>
 
   /**
+   * 获取卡名颜色配置
+   */
+  protected getCardNameColor(
+    color: 'white' | 'red' | 'gold'
+  ): PIXI.TextStyleOptions {
+    switch (color) {
+      case 'white': {
+        return { fill: '#fff', stroke: '#fff' }
+      }
+      case 'red': {
+        return {
+          stroke: '#d31b1d',
+          fill: ['#d31b1d', '#dd6052', '#d31b1d'],
+          fillGradientStops: [0.1, 0.45, 0.6],
+          fillGradientType: 1,
+        }
+      }
+      case 'gold': {
+        return {
+          stroke: '#c4a222',
+          fill: ['#c4a222', '#e8d54f', '#c5b540'],
+          fillGradientStops: [0.1, 0.45, 0.6],
+          fillGradientType: 1,
+        }
+      }
+      default: {
+        return { fill: '#000', stroke: '#000' }
+      }
+    }
+  }
+
+  /**
    * 绘制元素
    */
   protected drawElement(params: IDrawElementParam) {
@@ -75,15 +107,15 @@ export abstract class BaseCardTemplate {
    * 绘制卡名
    * @TODO 支持罕贵度卡名
    */
-  protected drawCardName(name: string, options?: { color?: string }) {
-    const opt = Object.assign({ color: '#000' }, options)
+  protected drawCardName(name: string, options?: PIXI.TextStyleOptions) {
+    const opt = options || { fill: '#000', stroke: '#000' }
     const fontStyle = new PIXI.TextStyle({
       fontFamily: 'YGOCN',
       fontSize: Math.floor(this.$sizer.fromPx(54)),
       strokeThickness: 0.5,
-      stroke: opt.color,
-      fill: opt.color,
       letterSpacing: -1,
+      lineJoin: 'round',
+      ...opt,
     })
     const maxWidth = this.$sizer.fromPx(526)
     const text = new PIXI.Text(name, fontStyle)

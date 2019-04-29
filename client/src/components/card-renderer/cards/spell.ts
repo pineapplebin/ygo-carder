@@ -14,7 +14,7 @@ export class SpellCardTemplate extends SpellTrapCardTemplate {
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, { color: '#fff' })
+    this.drawCardName(name, this.getCardNameColor('white'))
     this.drawCardCode(cardCode)
     this.drawSeries(series)
     this.drawCopyrightInfo(year)

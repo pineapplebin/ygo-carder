@@ -14,7 +14,7 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, { color: '#fff' })
+    this.drawCardName(name, this.getCardNameColor('gold'))
     this.drawCardCode(cardCode, { color: '#fff' })
     this.drawSeries(series, { color: '#fff' })
     this.drawCopyrightInfo(year, { color: '#fff' })

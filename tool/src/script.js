@@ -184,7 +184,7 @@
   function getXyzMonsterData(map) {
     const extra = getConditionMonsterData(map)
     delete extra["level"]
-    extra["rank"] = map["阶级"]
+    extra["rank"] = +map["阶级"]
     return extra
   }
 
