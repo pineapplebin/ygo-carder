@@ -13,7 +13,7 @@ interface IMock {
 
 export async function getCardList(): Promise<IBaseCard[]> {
   const res = await request<IServerResponse<IMock>>({
-    url: '/api/atlantean.json',
+    url: '/api/crystal.json',
   })
   return res.data.list
 
