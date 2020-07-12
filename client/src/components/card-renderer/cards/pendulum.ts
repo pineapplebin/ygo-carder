@@ -63,10 +63,16 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
    * 绘制卡图
    */
   async drawPendulumCardImage(size: TPendulumSize, card: IPendulumMonsterCard) {
-    const options =
-      size === 'sm'
-        ? { x: 44, y: 183, width: 620, height: 500 }
-        : { x: 44, y: 183, width: 620, height: 460 }
+    // const options =
+    //   size === 'sm'
+    //     ? { x: 44, y: 183, width: 620, height: 500 }
+    //     : { x: 44, y: 183, width: 620, height: 460 }
+    const options = {
+      x: 44,
+      y: 183,
+      width: 620,
+      height: 793,
+    }
     await this.drawCardImage(card, options)
   }
 
