@@ -4,7 +4,6 @@ import {
   TCardType,
   TMonsterAttribute,
   TLevel,
-  IEffectMonsterCard,
   TSpellTrapAttribute,
   TSpellTrapType,
 } from '@/typings/card'
