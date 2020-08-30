@@ -46,6 +46,10 @@ export enum TPendulumSize {
   SMALL = 'sm',
 }
 
+export interface ICardStyle {
+  cardNameColor: 'white' | 'red' | 'gold'
+}
+
 export interface IBaseCard {
   imageUrl: string
   cardCode: string
@@ -54,6 +58,7 @@ export interface IBaseCard {
   extra: any
   series: string
   year: string
+  style?: Partial<ICardStyle>
 }
 
 export interface IEffectMonsterCard extends IBaseCard {

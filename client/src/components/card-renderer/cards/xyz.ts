@@ -11,10 +11,14 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
       series,
       year,
       extra: { attribute, rank, effectText, atk, def, condition, types },
+      style,
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, this.getCardNameColor('white'))
+    this.drawCardName(
+      name,
+      this.getCardNameColor(style?.cardNameColor || 'white')
+    )
     this.drawCardCode(cardCode, { color: '#fff' })
     this.drawSeries(series, { color: '#fff' })
     this.drawCopyrightInfo(year, { color: '#fff' })

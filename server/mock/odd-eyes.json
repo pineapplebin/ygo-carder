@@ -8,6 +8,7 @@
         "name": "异色眼剑甲龙",
         "cardCode": "19221310",
         "imageUrl": "http://pine.me/ygo/19221310.png",
+        "year": "2015",
         "extra": {
           "level": 7,
           "attribute": 6,
@@ -23,6 +24,7 @@
         "name": "异色眼重力龙",
         "cardCode": "23851033",
         "imageUrl": "http://pine.me/ygo/23851033.png",
+        "year": "2015",
         "extra": {
           "level": 7,
           "attribute": 5,

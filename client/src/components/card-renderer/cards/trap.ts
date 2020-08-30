@@ -11,10 +11,14 @@ export class TrapCardTemplate extends SpellTrapCardTemplate {
       series,
       year,
       extra: { effectText, type },
+      style,
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, this.getCardNameColor('white'))
+    this.drawCardName(
+      name,
+      this.getCardNameColor(style?.cardNameColor || 'white')
+    )
     this.drawCardCode(cardCode)
     this.drawSeries(series)
     this.drawCopyrightInfo(year)

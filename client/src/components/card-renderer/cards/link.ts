@@ -11,10 +11,14 @@ export class LinkCardTemplate extends BaseMonsterCardTemplate {
       series,
       year,
       extra: { attribute, effectText, atk, link, types, condition, direction },
+      style,
     } = card
 
     this.drawBackground()
-    this.drawCardName(name, this.getCardNameColor('white'))
+    this.drawCardName(
+      name,
+      this.getCardNameColor(style?.cardNameColor || 'white')
+    )
     this.drawCardCode(cardCode)
     this.drawSeries(series, { x: 585 })
     this.drawCopyrightInfo(year)

@@ -23,13 +23,14 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
         effectText,
         pendulumEffectText,
       },
+      style,
     } = card
 
     this.drawBackground(secondType)
     await this.drawPendulumCardImage(size, card)
     this.drawPendulumBackground(size)
 
-    this.drawCardName(name)
+    this.drawCardName(name, this.getCardNameColor(style?.cardNameColor))
     this.drawCardCode(cardCode)
     this.drawAtk(atk)
     this.drawDef(def)

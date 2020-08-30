@@ -56,8 +56,8 @@ export abstract class BaseCardTemplate {
       case 'gold': {
         return {
           stroke: '#c4a222',
-          fill: ['#c4a222', '#e8d54f', '#c5b540'],
-          fillGradientStops: [0.1, 0.45, 0.6],
+          fill: ['#e8d54f', '#c4a222', '#c5b540', '#e8d54f'],
+          fillGradientStops: [0.1, 0.45, 0.5, 0.1],
           fillGradientType: 1,
         }
       }

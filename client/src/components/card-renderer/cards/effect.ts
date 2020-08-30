@@ -12,10 +12,11 @@ export class EffectCardTemplate extends BaseMonsterCardTemplate {
       series,
       year,
       extra: { attribute, level, effectText, atk, def, types },
+      style,
     } = card
 
     this.drawBackground()
-    this.drawCardName(name)
+    this.drawCardName(name, this.getCardNameColor(style?.cardNameColor))
     this.drawCardCode(cardCode)
     this.drawSeries(series)
     this.drawCopyrightInfo(year)
