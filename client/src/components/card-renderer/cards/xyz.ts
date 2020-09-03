@@ -37,18 +37,4 @@ export class XyzCardTemplate extends BaseMonsterCardTemplate {
     this.drawAtk(atk)
     this.drawDef(def)
   }
-
-  private drawRank(rank: number) {
-    const x = 67
-    const y = 125
-    for (let i = 0; i < rank; i++) {
-      this.drawElement({
-        name: `level-${TLevel.RANK}`,
-        x: x + i * 48,
-        y,
-        width: 45,
-        height: 45,
-      })
-    }
-  }
 }

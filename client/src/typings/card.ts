@@ -130,7 +130,8 @@ export interface ILinkMonsterCard extends IBaseCard {
 
 export interface IPendulumMonsterCard extends IBaseCard {
   extra: {
-    level: number
+    level?: number
+    rank?: number
     attribute: number
     types: string[]
     atk: string
@@ -140,5 +141,6 @@ export interface IPendulumMonsterCard extends IBaseCard {
     scale: string
     effectText: string
     pendulumEffectText: string
+    condition?: string
   }
 }

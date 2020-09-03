@@ -392,6 +392,23 @@ export abstract class BaseMonsterCardTemplate extends BaseCardTemplate {
   }
 
   /**
+   * 绘制等阶
+   */
+  protected drawRank(rank: number) {
+    const x = 67
+    const y = 125
+    for (let i = 0; i < rank; i++) {
+      this.drawElement({
+        name: `level-${TLevel.RANK}`,
+        x: x + i * 48,
+        y,
+        width: 45,
+        height: 45,
+      })
+    }
+  }
+
+  /**
    * 绘制卡牌信息（种族等）
    */
   protected async drawInformation(types: string[]) {

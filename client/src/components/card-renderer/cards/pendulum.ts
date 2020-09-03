@@ -15,6 +15,7 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
         scale,
         attribute,
         level,
+        rank,
         types,
         atk,
         def,
@@ -22,6 +23,7 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
         size,
         effectText,
         pendulumEffectText,
+        condition,
       },
       style,
     } = card
@@ -30,7 +32,11 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
     await this.drawPendulumCardImage(size, card)
     this.drawPendulumBackground(size)
 
-    this.drawCardName(name, this.getCardNameColor(style?.cardNameColor))
+    const dftColor = secondType === TCardType.XYZ ? 'white' : null
+    this.drawCardName(
+      name,
+      this.getCardNameColor(style?.cardNameColor || dftColor)
+    )
     this.drawCardCode(cardCode)
     this.drawAtk(atk)
     this.drawDef(def)
@@ -38,12 +44,19 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
     this.drawCopyrightInfo(year)
 
     this.drawAttribute(attribute)
-    this.drawLevel(level)
+    if (secondType === TCardType.XYZ) {
+      this.drawRank(rank)
+    } else {
+      this.drawLevel(level)
+    }
     this.drawInformation(types)
 
     this.drawPendulumScale(size, scale)
 
-    this.drawMonsterEffectText(size, effectText)
+    if (condition) {
+      this.drawCondition(condition)
+    }
+    this.drawMonsterEffectText(size, effectText, !!condition)
     this.drawPendulumEffectText(size, pendulumEffectText)
   }
 
@@ -64,10 +77,6 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
    * 绘制卡图
    */
   async drawPendulumCardImage(size: TPendulumSize, card: IPendulumMonsterCard) {
-    // const options =
-    //   size === 'sm'
-    //     ? { x: 44, y: 183, width: 620, height: 500 }
-    //     : { x: 44, y: 183, width: 620, height: 460 }
     const options = {
       x: 44,
       y: 183,
@@ -80,16 +89,25 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
   /**
    * 绘制怪兽效果
    */
-  async drawMonsterEffectText(size: TPendulumSize, effectText: string) {
+  async drawMonsterEffectText(
+    size: TPendulumSize,
+    effectText: string,
+    haveCondition: boolean
+  ) {
     const options = {
       [TPendulumSize.LARGE]: { y: 806, height: 133 },
       [TPendulumSize.MIDDLE]: { y: 806, height: 133 },
       [TPendulumSize.SMALL]: { y: 806, height: 133 },
+    }[size]
+    if (haveCondition) {
+      options.y = 830
+      options.height = 108
     }
+
     this.drawEffectText(effectText, {
       width: 605,
       x: 52,
-      ...options[size],
+      ...options,
     })
   }
 
@@ -125,14 +143,19 @@ export class PendulumCardTemplate extends BaseMonsterCardTemplate {
       [TPendulumSize.SMALL]: { y: 728 },
     }[size]
 
-    const left = new PIXI.Text(scale, fontStyle)
-    left.x = this.$sizer.fromPx(60)
-    left.y = this.$sizer.fromPx(options.y)
-    const right = new PIXI.Text(scale, fontStyle)
-    right.x = this.$sizer.fromPx(626)
-    right.y = this.$sizer.fromPx(options.y)
+    const drawText = (pos: { x: number; y: number }, content: string) => {
+      const t = new PIXI.Text(content, fontStyle)
+      t.x = this.$sizer.fromPx(pos.x)
+      t.y = this.$sizer.fromPx(pos.y)
+      this.$app.stage.addChild(t)
+    }
 
-    this.$app.stage.addChild(left)
-    this.$app.stage.addChild(right)
+    String(scale)
+      .split('')
+      .forEach((char, idx) => {
+        const offset = String(scale).length > 1 ? -12 : 0
+        drawText({ x: offset + 60 + idx * 20, ...options }, char)
+        drawText({ x: offset + 626 + idx * 20, ...options }, char)
+      })
   }
 }
