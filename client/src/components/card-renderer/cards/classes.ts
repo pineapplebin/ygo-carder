@@ -119,7 +119,7 @@ export abstract class BaseCardTemplate {
     const maxWidth = this.$sizer.fromPx(526)
     const text = new PIXI.Text(name, fontStyle)
     text.x = this.$sizer.fromPx(55)
-    text.y = this.$sizer.fromPx(45)
+    text.y = this.$sizer.fromPx(52)
     const measure = PIXI.TextMetrics.measureText(name, fontStyle)
     if (measure.width > maxWidth) {
       text.scale.x = maxWidth / measure.width

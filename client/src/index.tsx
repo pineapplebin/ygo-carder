@@ -1,7 +1,7 @@
 import '@babel/polyfill'
 import 'antd-mobile/dist/antd-mobile.css'
 import './styles/main.less'
-import '../assets/YGODIY-Chinese.ttf'
+import '../assets/YGODIY-Chinese-my.ttf'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
@@ -32,7 +32,7 @@ function App() {
         {pages.map((p, idx) =>
           RouteWrap({
             ...p,
-            key: '' + idx
+            key: '' + idx,
           })
         )}
         <NotMatch />
