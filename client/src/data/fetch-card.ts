@@ -1,10 +1,4 @@
-import pSampleImage from '../../assets/sample.png'
-import {
-  IBaseCard,
-  IEffectMonsterCard,
-  TCardType,
-  TMonsterAttribute,
-} from '@/typings/card'
+import { IBaseCard } from '@/typings/card'
 import { request, IServerResponse } from './request'
 
 interface IMock {

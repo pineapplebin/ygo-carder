@@ -4,7 +4,7 @@
     "list": [
       {
         "type": 9,
-        "imageUrl": "http://pine.me/ygo/11969228.png",
+        "imageUrl": "http://pine.com/ygo/11969228.png",
         "cardCode": "11969228",
         "name": "龙骑兵团骑士-始枪龙骑士",
         "series": "LVP2-JP031",
@@ -22,7 +22,7 @@
       },
       {
         "type": 6,
-        "imageUrl": "http://pine.me/ygo/28927782.png",
+        "imageUrl": "http://pine.com/ygo/28927782.png",
         "cardCode": "28927782",
         "name": "龙骑兵团疾驰",
         "series": "CYHO-JP074",
@@ -34,7 +34,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/48891960.png",
+        "imageUrl": "http://pine.com/ygo/48891960.png",
         "cardCode": "48891960",
         "name": "龙骑兵团骑士-屠枪龙骑士",
         "series": "CYHO-JP033",
@@ -51,7 +51,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/12496261.png",
+        "imageUrl": "http://pine.com/ygo/12496261.png",
         "cardCode": "12496261",
         "name": "龙骑兵团骑士-祭杖龙骑士",
         "series": "CYHO-JP032",
@@ -68,7 +68,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/29253591.png",
+        "imageUrl": "http://pine.com/ygo/29253591.png",
         "cardCode": "29253591",
         "name": "龙骑兵团-长柄大刀龙",
         "series": "CYHO-JP017",
@@ -84,7 +84,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/92868896.png",
+        "imageUrl": "http://pine.com/ygo/92868896.png",
         "cardCode": "92868896",
         "name": "龙骑兵团-元老院",
         "series": "CYHO-JP016",
@@ -100,7 +100,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/60004971.png",
+        "imageUrl": "http://pine.com/ygo/60004971.png",
         "cardCode": "60004971",
         "name": "龙骑兵团神枪",
         "series": "SECE-JP062",
@@ -112,7 +112,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/99659159.png",
+        "imageUrl": "http://pine.com/ygo/99659159.png",
         "cardCode": "99659159",
         "name": "操龙术",
         "series": "SD19-JP021",
@@ -124,7 +124,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/62265044.png",
+        "imageUrl": "http://pine.com/ygo/62265044.png",
         "cardCode": "62265044",
         "name": "龙之溪谷",
         "series": "SD19-JP020",
@@ -136,7 +136,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/36870345.png",
+        "imageUrl": "http://pine.com/ygo/36870345.png",
         "cardCode": "36870345",
         "name": "龙骑兵团-小标枪龙",
         "series": "SD19-JP003",
@@ -152,7 +152,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/00876330.png",
+        "imageUrl": "http://pine.com/ygo/00876330.png",
         "cardCode": "00876330",
         "name": "龙骑兵团武器-银槲剑",
         "series": "SD19-JP002",
@@ -168,7 +168,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/63487632.png",
+        "imageUrl": "http://pine.com/ygo/63487632.png",
         "cardCode": "63487632",
         "name": "龙骑兵团武器-灾魔剑",
         "series": "SD19-JP001",
@@ -184,7 +184,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/25682811.png",
+        "imageUrl": "http://pine.com/ygo/25682811.png",
         "cardCode": "25682811",
         "name": "龙骑兵团骑士-长枪龙骑士",
         "series": "DT08-JP041",
@@ -201,7 +201,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/88361177.png",
+        "imageUrl": "http://pine.com/ygo/88361177.png",
         "cardCode": "88361177",
         "name": "龙骑兵团-窄带军事官",
         "series": "DT08-JP027",
@@ -217,7 +217,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/52977572.png",
+        "imageUrl": "http://pine.com/ygo/52977572.png",
         "cardCode": "52977572",
         "name": "龙骑兵团-重标枪龙",
         "series": "DT08-JP026",
@@ -233,7 +233,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/25988873.png",
+        "imageUrl": "http://pine.com/ygo/25988873.png",
         "cardCode": "25988873",
         "name": "龙骑兵团-重枪龙",
         "series": "DT08-JP025",
@@ -249,7 +249,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/99594764.png",
+        "imageUrl": "http://pine.com/ygo/99594764.png",
         "cardCode": "99594764",
         "name": "龙骑兵团-翼枪龙",
         "series": "DT08-JP024",
@@ -265,7 +265,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/80159717.png",
+        "imageUrl": "http://pine.com/ygo/80159717.png",
         "cardCode": "80159717",
         "name": "龙骑兵团骑士-三叉龙骑士",
         "series": "DT07-JP040",
@@ -282,7 +282,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/80549379.png",
+        "imageUrl": "http://pine.com/ygo/80549379.png",
         "cardCode": "80549379",
         "name": "龙骑兵团-标枪龙",
         "series": "DT07-JP024",
@@ -298,7 +298,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/54455664.png",
+        "imageUrl": "http://pine.com/ygo/54455664.png",
         "cardCode": "54455664",
         "name": "龙骑兵团-叉龙",
         "series": "DT07-JP023",
@@ -314,7 +314,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/18060565.png",
+        "imageUrl": "http://pine.com/ygo/18060565.png",
         "cardCode": "18060565",
         "name": "龙骑兵团-首席百夫长",
         "series": "DT07-JP022",
@@ -330,7 +330,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/81661951.png",
+        "imageUrl": "http://pine.com/ygo/81661951.png",
         "cardCode": "81661951",
         "name": "龙骑兵团-士兵",
         "series": "DT07-JP021",
@@ -346,7 +346,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/21249921.png",
+        "imageUrl": "http://pine.com/ygo/21249921.png",
         "cardCode": "21249921",
         "name": "龙骑兵团骑士-雷枪龙骑士",
         "series": "LE16-JP003",
@@ -363,7 +363,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/00900787.png",
+        "imageUrl": "http://pine.com/ygo/00900787.png",
         "cardCode": "00900787",
         "name": "龙骑兵团骑士-魔枪龙骑士",
         "series": "DT06-JP037",
@@ -380,7 +380,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/59755122.png",
+        "imageUrl": "http://pine.com/ygo/59755122.png",
         "cardCode": "59755122",
         "name": "龙骑兵团-方阵龙",
         "series": "DT06-JP013",
@@ -396,7 +396,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/13361027.png",
+        "imageUrl": "http://pine.com/ygo/13361027.png",
         "cardCode": "13361027",
         "name": "龙骑兵团-黑枪龙",
         "series": "DT06-JP012",
@@ -412,7 +412,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/81962318.png",
+        "imageUrl": "http://pine.com/ygo/81962318.png",
         "cardCode": "81962318",
         "name": "龙骑兵团-军事官",
         "series": "DT06-JP011",
@@ -428,7 +428,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/54578613.png",
+        "imageUrl": "http://pine.com/ygo/54578613.png",
         "cardCode": "54578613",
         "name": "龙骑兵团-军团",
         "series": "DT06-JP010",
@@ -444,7 +444,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/28183605.png",
+        "imageUrl": "http://pine.com/ygo/28183605.png",
         "cardCode": "28183605",
         "name": "龙骑兵团-指挥官",
         "series": "DT06-JP009",
@@ -460,7 +460,7 @@
       },
       {
         "type": 7,
-        "imageUrl": "http://pine.me/ygo/34116027.png",
+        "imageUrl": "http://pine.com/ygo/34116027.png",
         "cardCode": "34116027",
         "name": "龙骑兵团骑士-赤枪龙骑士",
         "series": "DT06-JPB01",

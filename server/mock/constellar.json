@@ -7,7 +7,7 @@
         "type": 5,
         "name": "闪烁星圣",
         "cardCode": "35544402",
-        "imageUrl": "http://pine.me/ygo/35544402.png",
+        "imageUrl": "http://pine.com/ygo/35544402.png",
         "year": "2014",
         "extra": {
           "effectText": "「闪烁星圣」的②的效果1回合只能使用1次。①：以自己场上1只「星圣」怪兽为对象才能发动。那只怪兽的等级上升1星或者2星。②：这张卡在墓地存在的场合，把自己墓地1只「星圣」怪兽除外才能发动。墓地的这张卡加入手卡。",
@@ -19,7 +19,7 @@
         "type": 5,
         "name": "星圣暴风",
         "cardCode": "04820694",
-        "imageUrl": "http://pine.me/ygo/04820694.png",
+        "imageUrl": "http://pine.com/ygo/04820694.png",
         "year": "2014",
         "extra": {
           "effectText": "「星圣暴风」的①的效果在决斗中只能使用1次。①：自己结束阶段以自己场上2只持有XYZ素材的「星圣」XYZ怪兽为对象才能发动。那2只XYZ怪兽的XYZ素材全部取除，对方基本分变成一半。②：自己准备阶段以自己场上1只「星圣」XYZ怪兽和自己墓地1只「星圣」怪兽为对象才能发动。那只墓地的怪兽在那只XYZ怪兽下面重叠作为XYZ素材。",
@@ -31,7 +31,7 @@
         "type": 1,
         "name": "星圣·草帽星系",
         "cardCode": "78358521",
-        "imageUrl": "http://pine.me/ygo/78358521.png",
+        "imageUrl": "http://pine.com/ygo/78358521.png",
         "year": "2012",
         "extra": {
           "level": 4,
@@ -47,7 +47,7 @@
         "type": 8,
         "name": "星圣·欧米伽星云",
         "cardCode": "26329679",
-        "imageUrl": "http://pine.me/ygo/26329679.png",
+        "imageUrl": "http://pine.com/ygo/26329679.png",
         "year": "2012",
         "extra": {
           "rank": 4,
@@ -64,7 +64,7 @@
         "type": 6,
         "name": "星圣的流星",
         "cardCode": "63545861",
-        "imageUrl": "http://pine.me/ygo/63545861.png",
+        "imageUrl": "http://pine.com/ygo/63545861.png",
         "year": "2012",
         "extra": {
           "effectText": "①：这张卡发动的回合的伤害步骤结束时，没被和「星圣」怪兽战斗破坏的对方怪兽回到持有者卡组。",
@@ -76,7 +76,7 @@
         "type": 5,
         "name": "星圣的超新生",
         "cardCode": "90156158",
-        "imageUrl": "http://pine.me/ygo/90156158.png",
+        "imageUrl": "http://pine.com/ygo/90156158.png",
         "year": "2012",
         "extra": {
           "effectText": "这张卡发动的回合，自己不能进行战斗阶段。①：以自己墓地2只「星圣」怪兽为对象才能发动。被选择的怪兽加入手卡。",
@@ -88,7 +88,7 @@
         "type": 8,
         "name": "星圣神龙 托勒密星团M7",
         "cardCode": "38495396",
-        "imageUrl": "http://pine.me/ygo/38495396.png",
+        "imageUrl": "http://pine.com/ygo/38495396.png",
         "year": "2012",
         "extra": {
           "rank": 6,
@@ -105,7 +105,7 @@
         "type": 8,
         "name": "星圣·鬼星团",
         "cardCode": "02091298",
-        "imageUrl": "http://pine.me/ygo/02091298.png",
+        "imageUrl": "http://pine.com/ygo/02091298.png",
         "year": "2012",
         "extra": {
           "rank": 4,
@@ -122,7 +122,7 @@
         "type": 1,
         "name": "星圣·心宿二",
         "cardCode": "42391240",
-        "imageUrl": "http://pine.me/ygo/42391240.png",
+        "imageUrl": "http://pine.com/ygo/42391240.png",
         "year": "2012",
         "extra": {
           "level": 6,
@@ -138,7 +138,7 @@
         "type": 1,
         "name": "星圣·外屏七",
         "cardCode": "16906241",
-        "imageUrl": "http://pine.me/ygo/16906241.png",
+        "imageUrl": "http://pine.com/ygo/16906241.png",
         "year": "2012",
         "extra": {
           "level": 6,
@@ -154,7 +154,7 @@
         "type": 1,
         "name": "星圣·箕宿三",
         "cardCode": "70908596",
-        "imageUrl": "http://pine.me/ygo/70908596.png",
+        "imageUrl": "http://pine.com/ygo/70908596.png",
         "year": "2012",
         "extra": {
           "level": 4,
@@ -170,7 +170,7 @@
         "type": 1,
         "name": "星圣·柳宿增三",
         "cardCode": "43513897",
-        "imageUrl": "http://pine.me/ygo/43513897.png",
+        "imageUrl": "http://pine.com/ygo/43513897.png",
         "year": "2012",
         "extra": {
           "level": 4,
@@ -186,7 +186,7 @@
         "type": 1,
         "name": "星圣·轩辕十四",
         "cardCode": "17129783",
-        "imageUrl": "http://pine.me/ygo/17129783.png",
+        "imageUrl": "http://pine.com/ygo/17129783.png",
         "year": "2012",
         "extra": {
           "level": 3,
@@ -202,7 +202,7 @@
         "type": 1,
         "name": "星圣·候",
         "cardCode": "70624184",
-        "imageUrl": "http://pine.me/ygo/70624184.png",
+        "imageUrl": "http://pine.com/ygo/70624184.png",
         "year": "2012",
         "extra": {
           "level": 2,
@@ -218,7 +218,7 @@
         "type": 1,
         "name": "星圣·羽林军二十六",
         "cardCode": "44635489",
-        "imageUrl": "http://pine.me/ygo/44635489.png",
+        "imageUrl": "http://pine.com/ygo/44635489.png",
         "year": "2012",
         "extra": {
           "level": 1,
@@ -234,7 +234,7 @@
         "type": 5,
         "name": "星圣的星痕",
         "cardCode": "35631584",
-        "imageUrl": "http://pine.me/ygo/35631584.png",
+        "imageUrl": "http://pine.com/ygo/35631584.png",
         "year": "2011",
         "extra": {
           "effectText": "①：1回合1次，自己场上的「星圣」XYZ怪兽特殊召唤成功时才能发动。从卡组抽1张。",
@@ -246,7 +246,7 @@
         "type": 8,
         "name": "星圣·昴星团",
         "cardCode": "73964868",
-        "imageUrl": "http://pine.me/ygo/73964868.png",
+        "imageUrl": "http://pine.com/ygo/73964868.png",
         "year": "2011",
         "extra": {
           "rank": 5,
@@ -263,7 +263,7 @@
         "type": 8,
         "name": "星圣·毕星团",
         "cardCode": "47579719",
-        "imageUrl": "http://pine.me/ygo/47579719.png",
+        "imageUrl": "http://pine.com/ygo/47579719.png",
         "year": "2011",
         "extra": {
           "rank": 3,
@@ -280,7 +280,7 @@
         "type": 1,
         "name": "星圣·角宿一",
         "cardCode": "40143123",
-        "imageUrl": "http://pine.me/ygo/40143123.png",
+        "imageUrl": "http://pine.com/ygo/40143123.png",
         "year": "2011",
         "extra": {
           "level": 5,
@@ -296,7 +296,7 @@
         "type": 1,
         "name": "星圣·氐宿四",
         "cardCode": "14759024",
-        "imageUrl": "http://pine.me/ygo/14759024.png",
+        "imageUrl": "http://pine.com/ygo/14759024.png",
         "year": "2011",
         "extra": {
           "level": 5,
@@ -312,7 +312,7 @@
         "type": 1,
         "name": "星圣·北河三",
         "cardCode": "78364470",
-        "imageUrl": "http://pine.me/ygo/78364470.png",
+        "imageUrl": "http://pine.com/ygo/78364470.png",
         "year": "2011",
         "extra": {
           "level": 4,
@@ -328,7 +328,7 @@
         "type": 1,
         "name": "星圣·牛宿二",
         "cardCode": "41269771",
-        "imageUrl": "http://pine.me/ygo/41269771.png",
+        "imageUrl": "http://pine.com/ygo/41269771.png",
         "year": "2011",
         "extra": {
           "level": 4,
@@ -344,7 +344,7 @@
         "type": 1,
         "name": "星圣·毕宿五",
         "cardCode": "15871676",
-        "imageUrl": "http://pine.me/ygo/15871676.png",
+        "imageUrl": "http://pine.com/ygo/15871676.png",
         "year": "2011",
         "extra": {
           "level": 3,
@@ -360,7 +360,7 @@
         "type": 1,
         "name": "星圣·娄宿一",
         "cardCode": "78486968",
-        "imageUrl": "http://pine.me/ygo/78486968.png",
+        "imageUrl": "http://pine.com/ygo/78486968.png",
         "year": "2011",
         "extra": {
           "level": 3,

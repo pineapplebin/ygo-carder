@@ -93,7 +93,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '.'),
     compress: true,
-    host: '0.0.0.0',
+    host: 'pine.com',
     port: 7799,
     historyApiFallback: true
   }

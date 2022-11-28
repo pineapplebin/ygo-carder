@@ -1,3 +1,3 @@
 export const CONFIG = {
-  serverUrl: 'http://pine.me'
+  serverUrl: 'http://pine.com'
 }

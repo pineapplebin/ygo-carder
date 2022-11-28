@@ -7,7 +7,7 @@
         "type": 1,
         "name": "青眼亚白龙",
         "cardCode": "38517737",
-        "imageUrl": "http://pine.me/ygo/38517737.png",
+        "imageUrl": "http://pine.com/ygo/38517737.png",
         "extra": {
           "level": 8,
           "attribute": 6,
@@ -22,7 +22,7 @@
         "type": 5,
         "name": "青色眼睛的激临",
         "cardCode": "29432790",
-        "imageUrl": "http://pine.me/ygo/29432790.png",
+        "imageUrl": "http://pine.com/ygo/29432790.png",
         "extra": {
           "type": 5,
           "effectText": "这张卡发动的回合，自己不是「青眼白龙」不能召唤·特殊召唤。①：包含这张卡的自己的手卡·场上·墓地的卡全部里侧表示除外，从卡组把最多3只「青眼白龙」特殊召唤。"
@@ -33,7 +33,7 @@
         "type": 2,
         "name": "青眼白龙",
         "cardCode": "89631139",
-        "imageUrl": "http://pine.me/ygo/89631139.png",
+        "imageUrl": "http://pine.com/ygo/89631139.png",
         "extra": {
           "level": 8,
           "attribute": 6,
@@ -48,7 +48,7 @@
         "type": 4,
         "name": "青眼混沌龙",
         "cardCode": "20654247",
-        "imageUrl": "http://pine.me/ygo/20654247.png",
+        "imageUrl": "http://pine.com/ygo/20654247.png",
         "extra": {
           "level": 8,
           "attribute": 4,
@@ -63,7 +63,7 @@
         "type": 7,
         "name": "青眼精灵龙",
         "cardCode": "59822133",
-        "imageUrl": "http://pine.me/ygo/59822133.png",
+        "imageUrl": "http://pine.com/ygo/59822133.png",
         "extra": {
           "level": 9,
           "attribute": 6,

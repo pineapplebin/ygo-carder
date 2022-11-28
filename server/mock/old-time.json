@@ -7,7 +7,7 @@
         "type": 1,
         "name": "杀手番茄",
         "cardCode": "83011277",
-        "imageUrl": "http://pine.me/ygo/83011277.png",
+        "imageUrl": "http://pine.com/ygo/83011277.png",
         "year": "2000",
         "extra": {
           "level": 4,
@@ -23,7 +23,7 @@
         "type": 2,
         "name": "独眼巨人",
         "cardCode": "76184692",
-        "imageUrl": "http://pine.me/ygo/76184692.png",
+        "imageUrl": "http://pine.com/ygo/76184692.png",
         "year": "1999",
         "extra": {
           "level": 4,
@@ -39,7 +39,7 @@
         "type": 5,
         "name": "黑洞",
         "cardCode": "53129443",
-        "imageUrl": "http://pine.me/ygo/53129443.png",
+        "imageUrl": "http://pine.com/ygo/53129443.png",
         "year": "1999",
         "extra": {
           "effectText": "①：场上的怪兽全部破坏。",

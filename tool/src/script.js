@@ -91,7 +91,7 @@
     if (!result["type"]) {
       result["type"] = /效果/.test(type) ? 1 : 2
     }
-    result["imageUrl"] = `http://pine.me/ygo/${map["卡片密码"]}.png`
+    result["imageUrl"] = `http://pine.com/ygo/${map["卡片密码"]}.png`
     result["cardCode"] = map["卡片密码"]
     result["name"] = map["中文名"]
     result["series"] = ""

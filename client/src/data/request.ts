@@ -4,7 +4,10 @@ import { CONFIG } from '../../config'
 export async function request<T>(params: AxiosRequestConfig): Promise<T> {
   params.url = CONFIG.serverUrl + params.url
   console.log(params)
-  const res = await axios.request<T>(params)
+  const res = await axios.request<T>({
+    ...params,
+    withCredentials: false,
+  })
   if (res.status === 200) {
     return res.data
   } else {

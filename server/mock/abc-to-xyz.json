@@ -4,7 +4,7 @@
     "list": [
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/30012506.png",
+        "imageUrl": "http://pine.com/ygo/30012506.png",
         "cardCode": "30012506",
         "name": "A-突击核",
         "series": "SDKS-JP001",
@@ -20,7 +20,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/77411244.png",
+        "imageUrl": "http://pine.com/ygo/77411244.png",
         "cardCode": "77411244",
         "name": "B-破坏龙兽",
         "series": "SDKS-JP002",
@@ -36,7 +36,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/03405259.png",
+        "imageUrl": "http://pine.com/ygo/03405259.png",
         "cardCode": "03405259",
         "name": "C-粉碎翼龙",
         "series": "SDKS-JP003",
@@ -52,7 +52,7 @@
       },
       {
         "type": 2,
-        "imageUrl": "http://pine.me/ygo/51638941.png",
+        "imageUrl": "http://pine.com/ygo/51638941.png",
         "cardCode": "51638941",
         "name": "V-喷气虎",
         "series": "AT15-JP004",
@@ -68,7 +68,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/96300057.png",
+        "imageUrl": "http://pine.com/ygo/96300057.png",
         "cardCode": "96300057",
         "name": "W-弹射飞翼",
         "series": "AT15-JP005",
@@ -84,7 +84,7 @@
       },
       {
         "type": 2,
-        "imageUrl": "http://pine.me/ygo/62651957.png",
+        "imageUrl": "http://pine.com/ygo/62651957.png",
         "cardCode": "62651957",
         "name": "X-首领加农",
         "series": "SDKS-JP005",
@@ -100,7 +100,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/65622692.png",
+        "imageUrl": "http://pine.com/ygo/65622692.png",
         "cardCode": "65622692",
         "name": "Y-龙头",
         "series": "SDKS-JP006",
@@ -116,7 +116,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/64500000.png",
+        "imageUrl": "http://pine.com/ygo/64500000.png",
         "cardCode": "64500000",
         "name": "Z-金属履带",
         "series": "SDKS-JP007",
@@ -132,7 +132,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/01561110.png",
+        "imageUrl": "http://pine.com/ygo/01561110.png",
         "cardCode": "01561110",
         "name": "ABC-神龙歼灭者",
         "series": "SDKS-JP041",
@@ -149,7 +149,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/99724761.png",
+        "imageUrl": "http://pine.com/ygo/99724761.png",
         "cardCode": "99724761",
         "name": "XZ-战车炮",
         "series": "SDKS-JP044",
@@ -166,7 +166,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/02111707.png",
+        "imageUrl": "http://pine.com/ygo/02111707.png",
         "cardCode": "02111707",
         "name": "XY-神龙炮",
         "series": "SDKS-JP043",
@@ -183,7 +183,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/25119460.png",
+        "imageUrl": "http://pine.com/ygo/25119460.png",
         "cardCode": "25119460",
         "name": "YZ-战车龙",
         "series": "DP17-JP029",
@@ -200,7 +200,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/91998119.png",
+        "imageUrl": "http://pine.com/ygo/91998119.png",
         "cardCode": "91998119",
         "name": "XYZ-神龙炮",
         "series": "SDKS-JP042",
@@ -217,7 +217,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/58859575.png",
+        "imageUrl": "http://pine.com/ygo/58859575.png",
         "cardCode": "58859575",
         "name": "VW-强击虎",
         "series": "AT15-JP001",
@@ -234,7 +234,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/84243274.png",
+        "imageUrl": "http://pine.com/ygo/84243274.png",
         "cardCode": "84243274",
         "name": "VWXYZ-神龙强击炮",
         "series": "DP19-JP028",
@@ -251,7 +251,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/65172015.png",
+        "imageUrl": "http://pine.com/ygo/65172015.png",
         "cardCode": "65172015",
         "name": "AtoZ-神龙歼灭炮",
         "series": "SDKS-JP040",
@@ -268,7 +268,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/75906310.png",
+        "imageUrl": "http://pine.com/ygo/75906310.png",
         "cardCode": "75906310",
         "name": "武装龙强击炮",
         "series": "DP19-JP021",
@@ -285,7 +285,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/66399653.png",
+        "imageUrl": "http://pine.com/ygo/66399653.png",
         "cardCode": "66399653",
         "name": "同盟格纳库",
         "series": "SDKS-JP020",
@@ -297,7 +297,7 @@
       },
       {
         "type": 6,
-        "imageUrl": "http://pine.me/ygo/39778366.png",
+        "imageUrl": "http://pine.com/ygo/39778366.png",
         "cardCode": "39778366",
         "name": "同盟紧急出动",
         "series": "SDKS-JP032",

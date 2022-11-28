@@ -4,7 +4,7 @@
     "list": [
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/15721392.png",
+        "imageUrl": "http://pine.com/ygo/15721392.png",
         "cardCode": "15721392",
         "name": "超量要请 阿尔方出动",
         "series": "DANE-JP056",
@@ -16,7 +16,7 @@
       },
       {
         "type": 8,
-        "imageUrl": "http://pine.me/ygo/57450198.png",
+        "imageUrl": "http://pine.com/ygo/57450198.png",
         "cardCode": "57450198",
         "name": "超级量子机兽 银辉霸王龙",
         "series": "DANE-JP037",
@@ -33,7 +33,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/73422829.png",
+        "imageUrl": "http://pine.com/ygo/73422829.png",
         "cardCode": "73422829",
         "name": "超量士 白光层",
         "series": "DANE-JP013",
@@ -49,7 +49,7 @@
       },
       {
         "type": 6,
-        "imageUrl": "http://pine.me/ygo/47819246.png",
+        "imageUrl": "http://pine.com/ygo/47819246.png",
         "cardCode": "47819246",
         "name": "超量机神剑-炎磁光层剑",
         "series": "SPWR-JP039",
@@ -61,7 +61,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/10424147.png",
+        "imageUrl": "http://pine.com/ygo/10424147.png",
         "cardCode": "10424147",
         "name": "超量机舰 炎磁大母舰",
         "series": "SPWR-JP038",
@@ -73,7 +73,7 @@
       },
       {
         "type": 8,
-        "imageUrl": "http://pine.me/ygo/84025439.png",
+        "imageUrl": "http://pine.com/ygo/84025439.png",
         "cardCode": "84025439",
         "name": "超量机神王 大磁炎",
         "series": "SPWR-JP037",
@@ -90,7 +90,7 @@
       },
       {
         "type": 8,
-        "imageUrl": "http://pine.me/ygo/57031794.png",
+        "imageUrl": "http://pine.com/ygo/57031794.png",
         "cardCode": "57031794",
         "name": "超量机兽 炎浆狮虎",
         "series": "SPWR-JP036",
@@ -107,7 +107,7 @@
       },
       {
         "type": 8,
-        "imageUrl": "http://pine.me/ygo/11646785.png",
+        "imageUrl": "http://pine.com/ygo/11646785.png",
         "cardCode": "11646785",
         "name": "超量机兽 大气衔尾蛇",
         "series": "SPWR-JP035",
@@ -124,7 +124,7 @@
       },
       {
         "type": 8,
-        "imageUrl": "http://pine.me/ygo/85252081.png",
+        "imageUrl": "http://pine.com/ygo/85252081.png",
         "cardCode": "85252081",
         "name": "超量机兽 脉冲虎鲸",
         "series": "SPWR-JP034",
@@ -141,7 +141,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/58753372.png",
+        "imageUrl": "http://pine.com/ygo/58753372.png",
         "cardCode": "58753372",
         "name": "超量妖精 阿尔方",
         "series": "SPWR-JP033",
@@ -157,7 +157,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/12369277.png",
+        "imageUrl": "http://pine.com/ygo/12369277.png",
         "cardCode": "12369277",
         "name": "超量士 蓝光层",
         "series": "SPWR-JP032",
@@ -173,7 +173,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/85374678.png",
+        "imageUrl": "http://pine.com/ygo/85374678.png",
         "cardCode": "85374678",
         "name": "超量士 绿光层",
         "series": "SPWR-JP031",
@@ -189,7 +189,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/59975920.png",
+        "imageUrl": "http://pine.com/ygo/59975920.png",
         "cardCode": "59975920",
         "name": "超量士 红光层",
         "series": "SPWR-JP030",

@@ -33,7 +33,7 @@ export abstract class BaseCardTemplate {
     public $app: PIXI.Application
   ) {}
 
-  abstract async render(card: IBaseCard): Promise<void>
+  abstract render(card: IBaseCard): Promise<void>
 
   /**
    * 获取卡名颜色配置

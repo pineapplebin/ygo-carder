@@ -4,7 +4,7 @@
     "list": [
       {
         "type": 6,
-        "imageUrl": "http://pine.me/ygo/82832464.png",
+        "imageUrl": "http://pine.com/ygo/82832464.png",
         "cardCode": "82832464",
         "name": "奈芙提斯的觉醒",
         "series": "DBHS-JP011",
@@ -16,7 +16,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/50847759.png",
+        "imageUrl": "http://pine.com/ygo/50847759.png",
         "cardCode": "50847759",
         "name": "奈芙提斯的希望",
         "series": "DBHS-JP010",
@@ -28,7 +28,7 @@
       },
       {
         "type": 5,
-        "imageUrl": "http://pine.me/ygo/23459650.png",
+        "imageUrl": "http://pine.com/ygo/23459650.png",
         "cardCode": "23459650",
         "name": "奈芙提斯的轮回",
         "series": "DBHS-JP009",
@@ -40,7 +40,7 @@
       },
       {
         "type": 9,
-        "imageUrl": "http://pine.me/ygo/87054946.png",
+        "imageUrl": "http://pine.com/ygo/87054946.png",
         "cardCode": "87054946",
         "name": "焰凰神-奈芙提斯",
         "series": "DBHS-JP008",
@@ -58,7 +58,7 @@
       },
       {
         "type": 9,
-        "imageUrl": "http://pine.me/ygo/50669347.png",
+        "imageUrl": "http://pine.com/ygo/50669347.png",
         "cardCode": "50669347",
         "name": "守护神-奈芙提斯",
         "series": "DBHS-JP007",
@@ -76,7 +76,7 @@
       },
       {
         "type": 4,
-        "imageUrl": "http://pine.me/ygo/24175232.png",
+        "imageUrl": "http://pine.com/ygo/24175232.png",
         "cardCode": "24175232",
         "name": "奈芙提斯之苍凰神",
         "series": "DBHS-JP006",
@@ -92,7 +92,7 @@
       },
       {
         "type": 4,
-        "imageUrl": "http://pine.me/ygo/88176533.png",
+        "imageUrl": "http://pine.com/ygo/88176533.png",
         "cardCode": "88176533",
         "name": "奈芙提斯之祭祀者",
         "series": "DBHS-JP005",
@@ -108,7 +108,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/51782995.png",
+        "imageUrl": "http://pine.com/ygo/51782995.png",
         "cardCode": "51782995",
         "name": "奈芙提斯之护卫者",
         "series": "DBHS-JP004",
@@ -124,7 +124,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/25397880.png",
+        "imageUrl": "http://pine.com/ygo/25397880.png",
         "cardCode": "25397880",
         "name": "奈芙提斯之叙述者",
         "series": "DBHS-JP003",
@@ -140,7 +140,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/98999181.png",
+        "imageUrl": "http://pine.com/ygo/98999181.png",
         "cardCode": "98999181",
         "name": "奈芙提斯之祈祷者",
         "series": "DBHS-JP002",
@@ -156,7 +156,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/52904476.png",
+        "imageUrl": "http://pine.com/ygo/52904476.png",
         "cardCode": "52904476",
         "name": "奈芙提斯之悟道者",
         "series": "DBHS-JP001",
@@ -172,7 +172,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/38107923.png",
+        "imageUrl": "http://pine.com/ygo/38107923.png",
         "cardCode": "38107923",
         "name": "暗黑凤凰神",
         "series": "PTDN-JP018",
@@ -188,7 +188,7 @@
       },
       {
         "type": 1,
-        "imageUrl": "http://pine.me/ygo/61441708.png",
+        "imageUrl": "http://pine.com/ygo/61441708.png",
         "cardCode": "61441708",
         "name": "奈芙提斯之凤凰神",
         "series": "FET-JP005",

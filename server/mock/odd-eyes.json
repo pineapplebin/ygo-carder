@@ -7,7 +7,7 @@
         "type": 1,
         "name": "异色眼剑甲龙",
         "cardCode": "19221310",
-        "imageUrl": "http://pine.me/ygo/19221310.png",
+        "imageUrl": "http://pine.com/ygo/19221310.png",
         "year": "2015",
         "extra": {
           "level": 7,
@@ -23,7 +23,7 @@
         "type": 4,
         "name": "异色眼重力龙",
         "cardCode": "23851033",
-        "imageUrl": "http://pine.me/ygo/23851033.png",
+        "imageUrl": "http://pine.com/ygo/23851033.png",
         "year": "2015",
         "extra": {
           "level": 7,
@@ -39,7 +39,7 @@
         "type": 7,
         "name": "异色眼陨火龙",
         "cardCode": "80696379",
-        "imageUrl": "http://pine.me/ygo/80696379.png",
+        "imageUrl": "http://pine.com/ygo/80696379.png",
         "year": "2015",
         "extra": {
           "level": 7,
@@ -56,7 +56,7 @@
         "type": 8,
         "name": "异色眼绝零龙",
         "cardCode": "16691074",
-        "imageUrl": "http://pine.me/ygo/16691074.png",
+        "imageUrl": "http://pine.com/ygo/16691074.png",
         "year": "2015",
         "extra": {
           "rank": 7,
@@ -70,7 +70,7 @@
       },
       {
         "type": 3,
-        "imageUrl": "http://pine.me/ygo/53262004.png",
+        "imageUrl": "http://pine.com/ygo/53262004.png",
         "cardCode": "53262004",
         "name": "异色眼风雷龙",
         "series": "DOCS-JP045",
@@ -87,7 +87,7 @@
       },
       {
         "type": 10,
-        "imageUrl": "http://pine.me/ygo/93149655.png",
+        "imageUrl": "http://pine.com/ygo/93149655.png",
         "cardCode": "93149655",
         "name": "异色眼幻影龙",
         "series": "YA01-JP001",
@@ -107,7 +107,7 @@
       },
       {
         "type": 10,
-        "imageUrl": "http://pine.me/ygo/45627618.png",
+        "imageUrl": "http://pine.com/ygo/45627618.png",
         "cardCode": "45627618",
         "name": "霸王黑龙 异色眼叛逆龙",
         "series": "CORE-JP051",
@@ -128,7 +128,7 @@
       },
       {
         "type": 10,
-        "imageUrl": "http://pine.me/ygo/58074177.png",
+        "imageUrl": "http://pine.com/ygo/58074177.png",
         "cardCode": "58074177",
         "name": "霸王白龙 异色眼辉翼龙",
         "series": "MG05-JP001",
@@ -149,7 +149,7 @@
       },
       {
         "type": 10,
-        "imageUrl": "http://pine.me/ygo/45014450.png",
+        "imageUrl": "http://pine.com/ygo/45014450.png",
         "cardCode": "45014450",
         "name": "霸王紫龙 异色眼猛毒龙",
         "series": "CP17-JP006",
